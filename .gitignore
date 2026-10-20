@@ -6,14 +6,17 @@ Thumbs.db
 ~$*
 *.lock
 
-# Python / Environments
+# Environments & Dependencies
 __pycache__/
 *.py[cod]
 .env
 .venv/
 venv/
 
-# IDE & Editor
+# IDE & Editor Cache
 .vscode/
 .idea/
 *.swp
+
+# Air-Gapped Merkle Bundles
+*.bundle

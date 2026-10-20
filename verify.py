@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 PROJECT ACME: CORE REFEREE & INVARIANT VERIFICATION ENGINE
-Version: 1.3.0
+Version: 1.4.0
 Invariants: Principle of Least Action (PLA), Boundary Guard, Value Attribution (70/30)
 """
 
@@ -84,6 +84,40 @@ def audit_ledger(registry_path="registry/graduates.json"):
 
     return True, f"Attribution ledger verified: {len(graduates)} accredited diploma records intact."
 
+def export_diploma(node_id, registry_path="registry/graduates.json", anchors_path="registry/anchors.json"):
+    if not os.path.exists(registry_path):
+        return False, f"Registry not found: {registry_path}"
+    if not os.path.exists(anchors_path):
+        return False, f"Anchors not found: {anchors_path}"
+
+    with open(registry_path, "r", encoding="utf-8") as f:
+        graduates = json.load(f)
+    with open(anchors_path, "r", encoding="utf-8") as f:
+        anchors = json.load(f)
+
+    record = next((g for g in graduates if g.get("node_id") == node_id), None)
+    if not record:
+        return False, f"Node ID '{node_id}' not found in accreditation registry."
+
+    anchor = anchors[0] if anchors else {"anchor_id": "UNKNOWN", "public_identifier": "UNANCHORED"}
+
+    diploma = {
+        "acme_protocol": "RFC-001 (Genesis v1.0.0)",
+        "accreditation_certificate": {
+            "recipient_node": record["node_id"],
+            "faculty": record["faculty"],
+            "thesis_specification": record["thesis_file"],
+            "immutable_merkle_sha": record["graduation_sha"],
+            "status": record["status"],
+            "biological_root_of_trust": {
+                "anchor_id": anchor.get("anchor_id"),
+                "identifier": anchor.get("public_identifier")
+            },
+            "value_attribution": record["attribution"]
+        }
+    }
+    return True, json.dumps(diploma, indent=2)
+
 def audit_changed_files():
     branch, _, _ = run_cmd("git rev-parse --abbrev-ref HEAD")
     if not branch.startswith("student/"):
@@ -127,6 +161,17 @@ def main():
             sys.exit(0)
         else:
             print(f"[FAIL] {msg}", file=sys.stderr)
+            sys.exit(1)
+
+    if len(sys.argv) > 2 and sys.argv[1] == "--export-diploma":
+        node_id = sys.argv[2]
+        passed, payload = export_diploma(node_id)
+        if passed:
+            print(f"[ACME DIPLOMA CERTIFICATE: {node_id}]")
+            print(payload)
+            sys.exit(0)
+        else:
+            print(f"[FAIL] {payload}", file=sys.stderr)
             sys.exit(1)
 
     if len(sys.argv) > 2 and sys.argv[1] == "--verify-thesis":
