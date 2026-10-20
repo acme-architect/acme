@@ -26,5 +26,8 @@ jobs:
       - name: Verify All Thesis Specifications
         run: python verify.py --verify-all
 
+      - name: Audit Value Attribution Ledger
+        run: python verify.py --audit-ledger
+
       - name: Invariant Boundary Guard Audit
         run: python verify.py

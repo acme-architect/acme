@@ -12,7 +12,7 @@
 * **Negative Boundary Condition:** Symmetrical emotional retaliation, unverified factual claims, and ungrounded defensive discourse are categorically rejected (REJECT).
 
 ## 2. GROUND TRUTH & METHOD
-* **Empirical Ground Truth:** Niklas Luhmann's autopoietic legal closure and the universal estoppel doctrine (*venire contra factum proprium*). Legal systems only process binary lawful/unlawful code.
+* **Empirical Ground Truth:** Niklas Luhmann's autopoietic legal closure and the universal estoppel doctrine (Venire Contra Factum Proprium). Legal systems only process binary lawful/unlawful code.
 * **Least Action Trajectory:** Procedural Aikido; absorbing adversarial kinetic inertia and neutralizing bad-faith maneuvers directly against statutory boundary conditions with zero metabolic friction.
 * **Red-Team / Contradiction Test:** Injection of speculative ad-hominem claims intercepted and collapsed through cold contradictory evidence matrices anchored in official state registries.
 
