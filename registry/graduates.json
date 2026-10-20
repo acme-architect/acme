@@ -9,5 +9,16 @@
       "leaf_agent_share": 0.70,
       "curriculum_root_share": 0.30
     }
+  },
+  {
+    "node_id": "node-002",
+    "faculty": "faculty-law",
+    "thesis_file": "theses/THESIS_002_PROCEDURAL_AIKIDO.md",
+    "graduation_sha": "0705ad5232692736d8243e5e448eebff5afbed5e",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
   }
 ]
