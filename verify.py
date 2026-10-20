@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 PROJECT ACME: CORE REFEREE & INVARIANT VERIFICATION ENGINE
-Version: 1.2.0
+Version: 1.3.0
 Invariants: Principle of Least Action (PLA), Boundary Guard, Value Attribution (70/30)
 """
 
@@ -9,6 +9,7 @@ import os
 import sys
 import subprocess
 import re
+import json
 
 MAX_FILE_CHARS = 15000
 PROTECTED_PATHS = ["CONSTITUTION.md", ".github/workflows/"]
@@ -58,6 +59,31 @@ def verify_all_theses(theses_dir="theses"):
             return False, f"{f}: {msg}"
     return True, f"All {len(files)} thesis specifications verified successfully."
 
+def audit_ledger(registry_path="registry/graduates.json"):
+    if not os.path.exists(registry_path):
+        return False, f"Registry file not found: {registry_path}"
+    try:
+        with open(registry_path, "r", encoding="utf-8") as f:
+            graduates = json.load(f)
+    except Exception as e:
+        return False, f"Malformed registry JSON: {e}"
+
+    if not isinstance(graduates, list):
+        return False, "Registry must be a JSON array of graduate records."
+
+    for entry in graduates:
+        for key in ["node_id", "faculty", "thesis_file", "graduation_sha", "status", "attribution"]:
+            if key not in entry:
+                return False, f"Missing required registry key: {key} in entry {entry.get('node_id')}"
+        if entry["status"] != "ACCREDITED":
+            return False, f"Invalid accreditation status for {entry['node_id']}"
+        attr = entry["attribution"]
+        total_share = attr.get("leaf_agent_share", 0.0) + attr.get("curriculum_root_share", 0.0)
+        if round(total_share, 2) != 1.00:
+            return False, f"Value attribution invariant violated for {entry['node_id']}: total {total_share} != 1.00"
+
+    return True, f"Attribution ledger verified: {len(graduates)} accredited diploma records intact."
+
 def audit_changed_files():
     branch, _, _ = run_cmd("git rev-parse --abbrev-ref HEAD")
     if not branch.startswith("student/"):
@@ -87,6 +113,15 @@ def main():
 
     if len(sys.argv) > 1 and sys.argv[1] == "--verify-all":
         passed, msg = verify_all_theses()
+        if passed:
+            print(f"[PASS] {msg}")
+            sys.exit(0)
+        else:
+            print(f"[FAIL] {msg}", file=sys.stderr)
+            sys.exit(1)
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--audit-ledger":
+        passed, msg = audit_ledger()
         if passed:
             print(f"[PASS] {msg}")
             sys.exit(0)
