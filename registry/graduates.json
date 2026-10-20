@@ -1,0 +1,13 @@
+[
+  {
+    "node_id": "node-001",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_001_LEAST_ACTION.md",
+    "graduation_sha": "2101f14f9efa90b74f2f1561d7830374fad147f3",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
+  }
+]
