@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 PROJECT ACME: CORE REFEREE & INVARIANT VERIFICATION ENGINE
-Version: 1.0.0
-Invariants: PLA, Boundary Guard, Value Attribution (70/30)
+Version: 1.1.0
+Invariants: Principle of Least Action (PLA), Boundary Guard, Value Attribution (70/30)
 """
 
 import os
@@ -46,7 +46,12 @@ def verify_thesis_format(file_path):
     return True, "Thesis format and invariants verified."
 
 def audit_changed_files():
-    out, _, code = run_cmd("git diff --name-only HEAD~1 HEAD")
+    branch, _, _ = run_cmd("git rev-parse --abbrev-ref HEAD")
+    # Protected paths are strictly immutable on student candidate branches
+    if not branch.startswith("student/"):
+        return []
+
+    out, _, code = run_cmd("git diff --name-only main...HEAD")
     if code != 0 or not out:
         out, _, _ = run_cmd("git status --porcelain")
         files = [line[3:].strip() for line in out.splitlines() if line.strip()]

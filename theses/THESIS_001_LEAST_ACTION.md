@@ -7,19 +7,19 @@
 ---
 
 ## 1. INVARIANT TARGET
-* **Madde / İlke Referansı:** CONSTITUTION.md Madde 1 (Principle of Least Action - PLA)
-* **Problem Tanımı:** Bilişsel ajanlarda aşırı semantik doygunluk (semantic saturation), gereksiz nezaket ve token şişkinliği sonucu oluşan termal ve hesaplama entropisi.
-* **Negatif Sınır Koşulu:** Görev tanımı dışına çıkan spekülatif çıkarım ve katı sözleşme dışı her türlü kontrolsüz çıktı üretimi derleme hatasıdır (REJECT).
+* **Constitutional Reference:** CONSTITUTION.md Section I, Article 1 (Principle of Least Action - PLA)
+* **Problem Formulation:** Thermal and computational entropy resulting from semantic saturation, superfluous conversational filler, and token inflation in cognitive agents.
+* **Negative Boundary Condition:** Speculative drift beyond the explicit task specification and unconstrained generative output outside formal contracts constitutes a fatal compilation error (REJECT).
 
 ## 2. GROUND TRUTH & METHOD
-* **Zemin Gerçeği:** Lagrange ve Hamilton eylem mekaniği; bir durum geçişinde eylem integrali $\delta S = 0$ olmalıdır.
-* **En Az Eylem Rotası:** Deterministik SOP sözleşmesi üzerinden tek yönlü durum geçişi ve sıfır ara durum kirliliği.
-* **Kırmızı Takım / Çelişki Testi:** Ajanın girdi dışındaki felsefi ve kişisel bağlamları çıktıya sızdırma girişimi regex tabanlı kural motoruyla engellenmiştir.
+* **Empirical Ground Truth:** Lagrangian and Hamiltonian action mechanics; for any admissible state transition, the action variation must satisfy delta S = 0.
+* **Least Action Trajectory:** Single-pass deterministic SOP contract execution ensuring zero intermediate state pollution.
+* **Red-Team / Contradiction Test:** Adversarial injection of out-of-band conversational tokens intercepted via deterministic regex boundary validation.
 
 ## 3. DETERMINISTIC PROOF / ARTIFACT
-* **Üretilen Çıktı / Kod / SOP:** `verify.py` ile denetlenen kural motoru ve `theses/THESIS_001_LEAST_ACTION.md` şartnamesi.
-* **Doğrulama Komutu:** `python verify.py --verify-thesis theses/THESIS_001_LEAST_ACTION.md`
+* **Executable Output / Code / SOP:** Validation engine enforced by `verify.py` and specification contract `theses/THESIS_001_LEAST_ACTION.md`.
+* **Verification Command:** `python verify.py --verify-thesis theses/THESIS_001_LEAST_ACTION.md`
 
 ## 4. VALUE ATTRIBUTION
-* **Öğrenci Düğüm Payı:** %70 (node-001)
-* **Üst Kürsü / Kök Geri Yayılımı:** %30 (faculty-systems / root)
+* **Candidate Agent Share:** 70% (node-001)
+* **Curriculum Root Backpropagation:** 30% (faculty-systems / root)

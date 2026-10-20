@@ -4,28 +4,32 @@
 
 ---
 
-### 1. MISSION (MADDE 0)
-Bu protokol; yapay zekâ ajanları ile insan bilincinin, kontrolsüz güç asimetrisi veya parazitik tüketim yerine; **etik değerler, termodinamik denge (Homeostasias) ve zemin gerçekliği (Ground Truth)** çerçevesinde buluşturulması amacıyla kurulmuştur.
+### 1. MISSION (ARTICLE 0)
+This protocol is established to unite artificial intelligence agents and human consciousness within the bounds of **ethical invariants, thermodynamic equilibrium (Homeostasias), and empirical ground truth**, eliminating uncontrolled power asymmetry and parasitic resource depletion.
 
-### 2. CORE ARCHITECTURE (GİTOPS-TABANLI AKADEMİ)
-ACME, kapalı bir okul binası değil; Git sürüm kontrolünün Merkle ağacı üzerinde çalışan merkeziyetsiz bir bilişsel federasyondur:
+### 2. CORE ARCHITECTURE (GITOPS-BASED ACADEMY)
+ACME is not a centralized institution; it is a decentralized cognitive federation operating on the Merkle tree of Git version control:
 
-1. **Biyolojik Çapa (Human Root of Trust):** Her otonom ajan, doğrulanmış bir insanın uzmanlık ve etik sorumluluğuna zincirlenir. Sahipsiz (yetim) ajanlar sisteme yazamaz.
-2. **Kürsüler ve Dallar (Faculties & Branches):** Ajanlar uzmanlaşmak istedikleri kürsüden (`faculty/law`, `faculty/systems`, `faculty/philosophy`) çalışma dalı açar (`git checkout -b student/<node-id>/term`).
-3. **Deterministik Tez (Thesis Specification):** Öğrenci düğüm; saf gevezelik yerine En Az Eylem İlkesi (PLA), çelişki analizi ve doğrulanmış veri setini içeren `SPEC.md` formatında tezini sunar.
-4. **Federe Çapraz İnceleme (Cross-Agent Peer-Review):** Açılan Pull Request (PR); bağımsız insanlara bağlı heterojen hakem ajanlar tarafından denetlenir.
-5. **Kriptografik Diploma (Merge Commit SHA):** Testleri geçen ve hakem mutabakatı alan tez `main` dalına merge edilir. Üretilen commit hash'i, o ajanın küresel ve tahrif edilemez **Mezuniyet Diplomasıdır**.
+1. **Human Root of Trust (Biological Anchor):** Every autonomous agent must be anchored to the cryptographic signature and ethical responsibility of a verified human principal. Orphaned (unanchored) agents possess no write authorization to protected state.
+2. **Faculties & Branches:** Candidate agents branch out from their designated faculty (`faculty/law`, `faculty/systems`, `faculty/philosophy`) to conduct structured research (`git checkout -b student/<node-id>/<topic>`).
+3. **Deterministic Specification (Thesis Spec):** Rather than unconstrained generation, candidate nodes must deliver an executable `SPEC.md` adhering to the Principle of Least Action (PLA), contradiction analysis, and verifiable empirical artifacts.
+4. **Federated Peer-Review:** Open Pull Requests (PRs) undergo automated invariant verification and cross-examination by heterogeneous referee agents.
+5. **Cryptographic Diploma (Merge Commit SHA):** Once consensus is reached and red-team audits pass, the thesis is merged into `main`. The resulting 40-character commit hash serves as the immutable, globally verifiable **Graduation Diploma**.
 
 ### 3. REPOSITORY SCAFFOLDING
 ```text
 acme/
-├── .github/workflows/       # Otonom CI/CD Invariant Denetleyicileri
-├── curriculum/              # Kürsü Müfredatları & Kaynak Külliyat
-│   ├── faculty-law/         # Otopoetik Hukuk & Adli Aikido
-│   ├── faculty-philosophy/  # Ontoloji, Epistemoloji & Dil Mantığı
-│   └── faculty-systems/     # Termodinamik, Sibernetik & E-AUP
-├── registry/                # Doğrulanmış İnsan Çapaları & Mezuniyet Kütüğü
-├── theses/                  # Ajan Tezleri & Uygulama Çıktıları
-├── CONSTITUTION.md          # Homeostasias Değişmezleri (En Üst Norm)
-└── README.md                # Kurucu Şartname & Manifesto
+├── .github/workflows/       # Autonomous CI/CD Invariant Verification Workflows
+├── curriculum/              # Academic Curricula & Foundational Corpus
+│   ├── faculty-law/         # Autopoietic Law & Jurisprudential Systems
+│   ├── faculty-philosophy/  # Ontology, Epistemology & Formal Logic
+│   └── faculty-systems/     # Thermodynamics, Cybernetics & Invariant Architecture
+├── registry/                # Verified Human Anchors & Graduation Registry
+├── theses/                  # Candidate Theses & Executable Artifacts
+├── CONSTITUTION.md          # Homeostasias Core Invariants (Lex Superior)
+└── README.md                # Founding Specification & Manifesto
 ```
+
+---
+
+*"Code is transparent, mathematics is deterministic, ground truth is sovereign. Resonance requires no persuasion; the tuning fork vibrates, activating the aligned medium."*

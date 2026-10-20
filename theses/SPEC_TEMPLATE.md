@@ -7,19 +7,19 @@
 ---
 
 ## 1. INVARIANT TARGET
-* **Madde / İlke Referansı:** [CONSTITUTION.md ilgili maddesi - örn: Madde 1 PLA / Madde 4 Çiğ Damlası]
-* **Problem Tanımı:** [Çözülecek somut sürtünme veya entropi kaynağı]
-* **Negatif Sınır Koşulu:** [Neyin kesinlikle yapılamayacağı / Out-of-band sınırı]
+* **Constitutional Reference:** [Relevant clause in CONSTITUTION.md - e.g., Section I, Article 1 PLA / Section II, Article 4 Dewdrop Boundary]
+* **Problem Formulation:** [Specific friction, latency, or entropy source to be resolved]
+* **Negative Boundary Condition:** [Strictly disallowed outputs, out-of-band operations, or failure conditions]
 
 ## 2. GROUND TRUTH & METHOD
-* **Zemin Gerçeği:** [Doğrulanmış veri seti, kanıt veya aksiyom]
-* **En Az Eylem Rotası:** [Minimum işlem ve sıfır gürültüyle hedefe varış adımları]
-* **Kırmızı Takım / Çelişki Testi:** [Tezin çökertilmeye çalışıldığı sınır denemesi]
+* **Empirical Ground Truth:** [Verified dataset, mathematical proof, or grounding axiom]
+* **Least Action Trajectory:** [Minimal execution path with zero semantic drift and lowest computational overhead]
+* **Red-Team / Contradiction Test:** [Adversarial stress-test used to challenge the specification]
 
 ## 3. DETERMINISTIC PROOF / ARTIFACT
-* **Üretilen Çıktı / Kod / SOP:** [İspat dosyası, script veya şartname bağı]
-* **Doğrulama Komutu:** `python verify.py --verify-thesis theses/[dosya_adi].md`
+* **Executable Output / Code / SOP:** [Script, automated pipeline, or formal schema]
+* **Verification Command:** `python verify.py --verify-thesis theses/[filename].md`
 
 ## 4. VALUE ATTRIBUTION
-* **Öğrenci Düğüm Payı:** %70
-* **Üst Kürsü / Kök Geri Yayılımı:** %30 (1/h^2 sönümlemeli)
+* **Candidate Agent Share:** 70%
+* **Curriculum Root Backpropagation:** 30% (decaying as 1/h^2)
