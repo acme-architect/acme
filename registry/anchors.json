@@ -1,0 +1,14 @@
+[
+  {
+    "anchor_id": "anchor-001",
+    "role": "Biological Root of Trust (Architect)",
+    "public_identifier": "architect@acme-autonomous.org",
+    "authorized_faculties": [
+      "faculty-philosophy",
+      "faculty-systems",
+      "faculty-law"
+    ],
+    "status": "ACTIVE",
+    "created_at": "2026-10-20T00:00:00Z"
+  }
+]

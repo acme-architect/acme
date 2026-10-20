@@ -1,0 +1,30 @@
+name: ACME Invariant Gate
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  referee-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Merkle Tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python Runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Environment Integration Check
+        run: python verify.py --check-env
+
+      - name: Verify All Thesis Specifications
+        run: python verify.py --verify-all
+
+      - name: Invariant Boundary Guard Audit
+        run: python verify.py

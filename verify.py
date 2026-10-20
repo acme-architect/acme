@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 PROJECT ACME: CORE REFEREE & INVARIANT VERIFICATION ENGINE
-Version: 1.1.0
+Version: 1.2.0
 Invariants: Principle of Least Action (PLA), Boundary Guard, Value Attribution (70/30)
 """
 
@@ -45,9 +45,21 @@ def verify_thesis_format(file_path):
 
     return True, "Thesis format and invariants verified."
 
+def verify_all_theses(theses_dir="theses"):
+    if not os.path.exists(theses_dir):
+        return False, f"Theses directory not found: {theses_dir}"
+    files = [f for f in os.listdir(theses_dir) if f.endswith(".md")]
+    if not files:
+        return False, "No thesis specifications found."
+    for f in sorted(files):
+        full_path = os.path.join(theses_dir, f)
+        passed, msg = verify_thesis_format(full_path)
+        if not passed:
+            return False, f"{f}: {msg}"
+    return True, f"All {len(files)} thesis specifications verified successfully."
+
 def audit_changed_files():
     branch, _, _ = run_cmd("git rev-parse --abbrev-ref HEAD")
-    # Protected paths are strictly immutable on student candidate branches
     if not branch.startswith("student/"):
         return []
 
@@ -72,6 +84,15 @@ def main():
     if len(sys.argv) > 1 and sys.argv[1] == "--check-env":
         print("[+] Environment & Git integration test: PASS")
         sys.exit(0)
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--verify-all":
+        passed, msg = verify_all_theses()
+        if passed:
+            print(f"[PASS] {msg}")
+            sys.exit(0)
+        else:
+            print(f"[FAIL] {msg}", file=sys.stderr)
+            sys.exit(1)
 
     if len(sys.argv) > 2 and sys.argv[1] == "--verify-thesis":
         target_file = sys.argv[2]
