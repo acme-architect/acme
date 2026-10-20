@@ -29,5 +29,8 @@ jobs:
       - name: Audit Value Attribution Ledger
         run: python verify.py --audit-ledger
 
+      - name: Run Red-Team Invariant Unit Tests
+        run: python -m unittest discover tests
+
       - name: Invariant Boundary Guard Audit
         run: python verify.py

@@ -1,15 +1,16 @@
 # PROJECT ACME: CANONICAL SYSTEM STATE EXPORT
-> **Generated:** 2026-10-20T17:57:04Z | **Release Tag:** `v1.0.0` | **Head SHA:** `f588d277d5a37c21696706109c31c59da558cfa6`
+> **Generated:** 2026-10-20T18:01:44Z | **Release Tag:** `v1.0.0` | **Head SHA:** `416abdba8501deaa07a9a2a5e3ae24ef7ca90c4d`
 
 ---
 
 ## 1. REPOSITORY TELEMETRY & MERKLE TREE
-- **Active Commit HEAD:** `f588d277d5a37c21696706109c31c59da558cfa6`
+- **Active Commit HEAD:** `416abdba8501deaa07a9a2a5e3ae24ef7ca90c4d`
 - **Current Release Tag:** `v1.0.0`
 - **Working Tree Status:** `DIRTY`
 
 ### Recent Merkle History:
 ```text
+* 416abdb feat(export): integrate state export generator, repo manifest, and remote setup specification
 * f588d27 feat(referee): upgrade engine to v1.4.0 with diploma export and air-gapped bundle support
 * 338b810 docs(governance): establish pr template and autonomous contribution protocol
 * 081d1ec docs(thesis): enforce strict prohibition on unanchored solipsism in thesis 003
@@ -25,7 +26,6 @@
 | * 397c79f feat(thesis): submit candidate thesis on autopoietic procedural aikido
 |/  
 * 1269b5c feat(referee): upgrade verification engine to v1.3.0 with attribution ledger auditing
-* a156d16 feat(curriculum): establish foundational academic curricula for systems, philosophy, and law faculties
 ```
 
 ## 2. BIOLOGICAL ROOT OF TRUST REGISTRY
