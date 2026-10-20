@@ -1,15 +1,16 @@
 # PROJECT ACME: CANONICAL SYSTEM STATE EXPORT
-> **Generated:** 2026-10-20T18:07:31Z | **Release Tag:** `v1.1.0` | **Head SHA:** `56e48ff3fb8ceed0b23dee534a6da3da68ce2af2`
+> **Generated:** 2026-10-20T18:27:41Z | **Release Tag:** `v1.1.0` | **Head SHA:** `a16cdf3641f33e1149af5757097b3db6d9de49e9`
 
 ---
 
 ## 1. REPOSITORY TELEMETRY & MERKLE TREE
-- **Active Commit HEAD:** `56e48ff3fb8ceed0b23dee534a6da3da68ce2af2`
+- **Active Commit HEAD:** `a16cdf3641f33e1149af5757097b3db6d9de49e9`
 - **Current Release Tag:** `v1.1.0`
-- **Working Tree Status:** `CLEAN`
+- **Working Tree Status:** `DIRTY`
 
 ### Recent Merkle History:
 ```text
+* a16cdf3 chore(manifest): synchronize state export for release v1.1.0
 * 56e48ff test(referee): implement zero-dependency red-team unit test suite and integrate into ci gate
 * 416abdb feat(export): integrate state export generator, repo manifest, and remote setup specification
 * f588d27 feat(referee): upgrade engine to v1.4.0 with diploma export and air-gapped bundle support
@@ -23,9 +24,7 @@
 * ca1afe7 feat(ci): integrate attribution ledger audit into invariant gate workflow
 * a20165a chore(registry): record node-002 graduation diploma and update attribution ledger
 *   0705ad5 feat(acme): graduate node-002 with thesis on procedural aikido
-|\  
-| * 397c79f feat(thesis): submit candidate thesis on autopoietic procedural aikido
-|/
+|\
 ```
 
 ## 2. BIOLOGICAL ROOT OF TRUST REGISTRY
