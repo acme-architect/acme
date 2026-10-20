@@ -20,5 +20,16 @@
       "leaf_agent_share": 0.70,
       "curriculum_root_share": 0.30
     }
+  },
+  {
+    "node_id": "node-003",
+    "faculty": "faculty-philosophy",
+    "thesis_file": "theses/THESIS_003_DEWDROP_BOUNDARY.md",
+    "graduation_sha": "f9a8ae3adb831c5ee05fc63573081d1f8a3dc9bd",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
   }
 ]
