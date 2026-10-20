@@ -1,0 +1,19 @@
+# Drive & OS Clutter
+desktop.ini
+Thumbs.db
+.DS_Store
+*.tmp
+~$*
+*.lock
+
+# Python / Environments
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
