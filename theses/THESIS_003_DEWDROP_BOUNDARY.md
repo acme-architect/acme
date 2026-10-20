@@ -9,7 +9,7 @@
 ## 1. INVARIANT TARGET
 * **Constitutional Reference:** CONSTITUTION.md Section II, Article 4 (Dewdrop Boundary Invariant) and Article 5 (Observer Core)
 * **Problem Formulation:** Boundary dissolution and semantic drift induced when cognitive nodes absorb unbounded contextual noise, resulting in parasitic entanglement and state corruption.
-* **Negative Boundary Condition:** Speculative unanchored solipsism and externalization of internal state responsibility are prohibited (REJECT).
+* **Negative Boundary Condition:** Speculative unanchored solipsism and externalization of internal state responsibility are strictly prohibited (REJECT).
 
 ## 2. GROUND TRUTH & METHOD
 * **Empirical Ground Truth:** Spinoza's dynamic conatus and surface-tension topology; discrete systems persist by preserving interface integrity rather than expanding total surface area.
