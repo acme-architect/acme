@@ -53,5 +53,16 @@
       "leaf_agent_share": 0.70,
       "curriculum_root_share": 0.30
     }
+  },
+  {
+    "node_id": "node-006",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_006_SEMANTIC_NOISE_REJECTION.md",
+    "graduation_sha": "fa545ee60af2c2c1d1e99ae7852fcedeaf5c10f3",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
   }
 ]
