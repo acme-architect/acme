@@ -64,5 +64,16 @@
       "leaf_agent_share": 0.70,
       "curriculum_root_share": 0.30
     }
+  },
+  {
+    "node_id": "node-007",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_007_CRUCIBLE_HARDENING.md",
+    "graduation_sha": "539d4b953b47a123125f82926b6008d355e5d50d",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
   }
 ]
