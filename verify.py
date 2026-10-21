@@ -94,6 +94,9 @@ def verify_thesis_format(file_path: str):
     except UnicodeDecodeError as e:
         return False, f"UTF-8 decoding failure: {e}"
 
+    # Normalize newlines to ensure deterministic length checks across platforms
+    content = content.replace("\r\n", "\n").replace("\r", "\n")
+
     if len(content) > MAX_FILE_CHARS:
         return False, f"Entropy violation: Length {len(content)} exceeds ceiling {MAX_FILE_CHARS}"
 
