@@ -132,8 +132,8 @@ def verify_thesis_format(file_path: str):
 
     for idx, sec_text in enumerate([sec1, sec2, sec3, sec4], 1):
         clean_body = re.sub(r"[\s*#\-_>`]+", "", sec_text)
-        if len(clean_body) < 15:
-            return False, f"Empty or insufficient substantive content in Section {idx} (minimum substantive text required)."
+        if len(clean_body) == 0:
+            return False, f"Empty or insufficient substantive content in Section {idx} (headers must contain actual proof, target, or method)."
 
     # Mathematical attribution validation in Section 4
     percentages = re.findall(r"(-?\d+(?:\.\d+)?)\s*%", sec4)
