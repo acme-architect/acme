@@ -42,5 +42,16 @@
       "leaf_agent_share": 0.70,
       "curriculum_root_share": 0.30
     }
+  },
+  {
+    "node_id": "node-005",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_005_GOAL_TO_SPEC.md",
+    "graduation_sha": "b8a68797b9ca19fe4780d2cc01c8b34118663188",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
   }
 ]
