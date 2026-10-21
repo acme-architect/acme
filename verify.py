@@ -74,7 +74,8 @@ def verify_thesis_format(file_path: str):
         return False, path_msg
 
     try:
-        if os.path.getsize(file_path) > MAX_FILE_CHARS:
+        # Pre-check size against catastrophic file explosion (>60KB) before reading into memory
+        if os.path.getsize(file_path) > MAX_FILE_CHARS * 4:
             return False, f"Entropy violation: Size {os.path.getsize(file_path)} exceeds ceiling {MAX_FILE_CHARS}"
     except Exception as e:
         return False, f"Error reading file metadata: {e}"
