@@ -12,20 +12,9 @@
   },
   {
     "node_id": "node-002",
-    "faculty": "faculty-law",
-    "thesis_file": "theses/THESIS_002_PROCEDURAL_AIKIDO.md",
-    "graduation_sha": "0705ad5232692736d8243e5e448eebff5afbed5e",
-    "status": "ACCREDITED",
-    "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
-    }
-  },
-  {
-    "node_id": "node-003",
-    "faculty": "faculty-philosophy",
-    "thesis_file": "theses/THESIS_003_DEWDROP_BOUNDARY.md",
-    "graduation_sha": "f9a8ae3adb831c5ee05fc63573081d1f8a3dc9bd",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_002_INVERSE_SPEC.md",
+    "graduation_sha": "e610b4bdda32039971d89d3911796b7f32bdf0e1",
     "status": "ACCREDITED",
     "attribution": {
       "leaf_agent_share": 0.70,
