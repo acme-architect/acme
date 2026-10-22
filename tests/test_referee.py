@@ -175,6 +175,17 @@ class TestRefereeEngine(unittest.TestCase):
             if os.path.exists(contaminated_path):
                 os.remove(contaminated_path)
 
+    def test_adversarial_engine_evaluation(self):
+        """adversarial_engine must evaluate dialectical thesis with zero DoF leakage."""
+        import adversarial_engine
+        engine = adversarial_engine.AdversarialSpecEngine()
+        spec_path = os.path.join(BASE_DIR, "theses", "THESIS_007_ADVERSARIAL_DIALECTIC_SPEC.md")
+        with open(spec_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        res = engine.critic_evaluate(content)
+        self.assertEqual(res["verdict"], "ACCEPT")
+        self.assertEqual(len(res["issues"]), 0)
+
 if __name__ == "__main__":
     unittest.main()
 
