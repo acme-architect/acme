@@ -26,6 +26,32 @@ MAX_FILE_CHARS = 15000
 PROTECTED_PATHS = ["CONSTITUTION.md", ".github/workflows/"]
 VALID_BRANCH_REGEX = r'^(student/node-\d+/.+|sprints/sprint-\d+(\.\d+)?/.+)$'
 
+ALLOWED_ROOT_PY = {
+    "verify.py",
+    "spec_designer.py",
+    "spec_compiler.py",
+}
+
+def verify_root_purity(root_dir: str = None):
+    if root_dir is None:
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.exists(root_dir) or not os.path.isdir(root_dir):
+        return False, f"Root directory not found: {root_dir}"
+
+    unauthorized = []
+    for f in sorted(os.listdir(root_dir)):
+        if f.endswith(".py"):
+            full_path = os.path.join(root_dir, f)
+            if os.path.isfile(full_path) and f not in ALLOWED_ROOT_PY:
+                unauthorized.append(f)
+
+    if unauthorized:
+        for f in unauthorized:
+            print(f"[FAIL] ROOT PURITY VIOLATION: Unauthorized application file detected in core: {f}")
+        return False, f"Unauthorized application file detected in core: {', '.join(unauthorized)}"
+
+    return True, "Root purity verified: only constitutional engine scripts present."
+
 def validate_branch_name(branch: str) -> bool:
     if not branch or branch in ["main", "HEAD"]:
         return True
@@ -353,6 +379,10 @@ def audit_changed_files():
 def main():
     print("=== [ACME REFEREE ENGINE: INVARIANT AUDIT] ===")
     
+    passed_purity, purity_msg = verify_root_purity()
+    if not passed_purity:
+        sys.exit(1)
+
     if len(sys.argv) == 1:
         # Default boundary guard audit
         violations = audit_changed_files()
@@ -418,9 +448,13 @@ def main():
             print(f"[FAIL] {payload}", file=sys.stderr)
             sys.exit(1)
 
+    if arg == "--verify-purity":
+        print(f"[PASS] {purity_msg}")
+        sys.exit(0)
+
     # Any unknown argument triggers error
     print(f"[FAIL] Unrecognized CLI option: {arg}", file=sys.stderr)
-    print("Usage: verify.py [--check-env | --verify-all | --audit-ledger | --verify-thesis <file> | --export-diploma <node>]", file=sys.stderr)
+    print("Usage: verify.py [--check-env | --verify-purity | --verify-all | --audit-ledger | --verify-thesis <file> | --export-diploma <node>]", file=sys.stderr)
     sys.exit(2)
 
 if __name__ == "__main__":
