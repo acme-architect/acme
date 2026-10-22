@@ -123,11 +123,11 @@
   {
     "node_id": "node-012",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_012_LIVING_SPEC_DIRECTOR.md",
-    "graduation_sha": "eed0e9f42aecaa7ec815f7b85a282ac94cc393e2",
+    "thesis_file": "theses/THESIS_012_PURE_NLP_COGNITIVE_CORE.md",
+    "graduation_sha": "27118e06b6e3f4447a3627066307d0d333315f50",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.7,
+      "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
   }
