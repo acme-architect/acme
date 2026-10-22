@@ -145,8 +145,8 @@
   {
     "node_id": "node-014",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_014_AUTONOMOUS_FRICTION_HARVESTING.md",
-    "graduation_sha": "c9bf55af6433fbab996915b40f2e12fcd763d7f8",
+    "thesis_file": "theses/THESIS_014_RFC_INTAKE_PROTOCOL.md",
+    "graduation_sha": "dd2b0fa3671d2c1ba7013323c0597bd89114da08",
     "status": "ACCREDITED",
     "attribution": {
       "candidate_share": 0.7,
