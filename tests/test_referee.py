@@ -137,6 +137,24 @@ class TestRefereeEngine(unittest.TestCase):
         self.assertFalse(verify.validate_branch_name("student/invalid"))
         self.assertFalse(verify.validate_branch_name("sprints/invalid"))
 
+    def test_root_purity_guard_clean(self):
+        """Current root directory must strictly satisfy root purity invariants."""
+        passed, msg = verify.verify_root_purity(BASE_DIR)
+        self.assertTrue(passed, f"Root purity violation in production core: {msg}")
+
+    def test_root_purity_guard_rejection_on_rogue_app(self):
+        """Simulating an unauthorized python file (e.g. rogue_app.py) must fail verification."""
+        rogue_path = os.path.join(BASE_DIR, "rogue_app.py")
+        try:
+            with open(rogue_path, "w", encoding="utf-8") as f:
+                f.write("# unauthorized application code\n")
+            passed, msg = verify.verify_root_purity(BASE_DIR)
+            self.assertFalse(passed)
+            self.assertIn("rogue_app.py", msg)
+        finally:
+            if os.path.exists(rogue_path):
+                os.remove(rogue_path)
+
 if __name__ == "__main__":
     unittest.main()
 
