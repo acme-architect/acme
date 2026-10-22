@@ -6,8 +6,8 @@
     "graduation_sha": "2101f14f9efa90b74f2f1561d7830374fad147f3",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -17,8 +17,8 @@
     "graduation_sha": "0705ad5232692736d8243e5e448eebff5afbed5e",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -28,8 +28,8 @@
     "graduation_sha": "f9a8ae3adb831c5ee05fc63573081d1f8a3dc9bd",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -39,8 +39,8 @@
     "graduation_sha": "e610b4bdda32039971d89d3911796b7f32bdf0e1",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -50,8 +50,8 @@
     "graduation_sha": "b8a68797b9ca19fe4780d2cc01c8b34118663188",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -61,8 +61,8 @@
     "graduation_sha": "fa545ee60af2c2c1d1e99ae7852fcedeaf5c10f3",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -72,8 +72,8 @@
     "graduation_sha": "539d4b953b47a123125f82926b6008d355e5d50d",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   },
   {
@@ -83,9 +83,41 @@
     "graduation_sha": "5168ec10f86fcbf10c1c778915a8e967da72efa8",
     "status": "ACCREDITED",
     "attribution": {
-      "leaf_agent_share": 0.70,
-      "curriculum_root_share": 0.30
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-009",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_009_TELEOLOGICAL_VALIDATION.md",
+    "graduation_sha": "e0dd2c8a1a7ebee4ad0f588331bf6cb7a0782690",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-010",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_010_TACIT_INTENT_DECONSTRUCTION.md",
+    "graduation_sha": "e0dd2c8a1a7ebee4ad0f588331bf6cb7a0782690",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-011",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_011_DRIFT_GUARD_CIRCUIT_BREAKER.md",
+    "graduation_sha": "e0dd2c8a1a7ebee4ad0f588331bf6cb7a0782690",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
     }
   }
 ]
-
