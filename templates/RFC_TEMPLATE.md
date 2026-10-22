@@ -17,6 +17,6 @@
 
 ---
 
-## 3. PROPOSED HYPOTHESIS & INVARIANT
-- **Candidate Invariant:** [Draft an abstract rule that would prevent this friction globally]
-- **Suggested DoF Layer:** [State whether this rule should be DoF=0 (hard invariant) or DoF>=1 (flexible)]
+## 3. PROPOSED HYPOTHESIS & DUAL SPECIFICATION
+- **A. Proposed Lex (Hard Invariants, DoF=0):** [Specify the rigid non-negotiable negative constraints or bounds]
+- **B. Proposed Norms (Adaptive Guidance, DoF>=1):** [Specify the operational best practices, recommended sizes, or heuristics]
