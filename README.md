@@ -24,8 +24,9 @@ acme/
 │   ├── faculty-law/         # Autopoietic Law & Jurisprudential Systems
 │   ├── faculty-philosophy/  # Ontology, Epistemology & Formal Logic
 │   └── faculty-systems/     # Thermodynamics, Cybernetics & Invariant Architecture
+├── docs/                    # Canonical Specifications & RFCs (SPEC-E-AUP Symbiosis)
 ├── registry/                # Verified Human Anchors & Graduation Registry
-├── theses/                  # Candidate Theses & Executable Artifacts
+├── theses/                  # Candidate Theses & Cognitive Doctrine Corpus
 ├── CONSTITUTION.md          # Homeostasias Core Invariants (Lex Superior)
 └── README.md                # Founding Specification & Manifesto
 ```
