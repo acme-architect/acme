@@ -152,6 +152,17 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-015",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_015_EPOCH_CHECKPOINTING_PROTOCOL.md",
+    "graduation_sha": "72856f5e7fafadb558c3d8d21f752471e083d090",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
 
