@@ -141,5 +141,17 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-014",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_014_AUTONOMOUS_FRICTION_HARVESTING.md",
+    "graduation_sha": "c9bf55af6433fbab996915b40f2e12fcd763d7f8",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
+
