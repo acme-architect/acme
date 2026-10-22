@@ -68,8 +68,8 @@
   {
     "node_id": "node-007",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_007_DOMAIN_AGNOSTIC_PURITY.md",
-    "graduation_sha": "a3d8f81559d9c11b4a8ebb008168200d8e8337e2",
+    "thesis_file": "theses/THESIS_007_ADVERSARIAL_DIALECTIC_SPEC.md",
+    "graduation_sha": "d234369bb5f585581e910a7d52b75cfe39511ff2",
     "status": "ACCREDITED",
     "attribution": {
       "leaf_agent_share": 0.7,
