@@ -14,7 +14,9 @@
 5. **Observer Core (Self-Attention Obligation):** Being is a logical necessity. When external coordinate frames degrade, attentional focus collapses inward to the observer core. Claims of absolute nothingness are mathematically undefined.
 6. **Zero-Friction Shield:** Reacting to parasitic external processes constitutes energy leakage. Non-reactivity is not passivity; it is the highest form of energy conservation and boundary preservation.
 7. **Downstream Non-Pollution Invariant (RFC-010):** The ACME core repository is an abstract normative authority, not boilerplate source code. Downstream projects must reference ACME externally via sidecar memory or manifest anchors. Ingesting ACME's internal administrative faculties into a client workspace is strictly prohibited.
+8. **Dual Normative Stratification (Lex vs. Norm) (RFC-016):** The governance core distinguishes between immutable laws (**Lex**, $\text{DoF}=0$, non-negotiable boundaries where violations trigger immediate halt) and contextual standards (**Norm**, $\text{DoF}\ge 1$, recommended heuristics and evolutionary patterns). A system must enforce Lex to preserve identity, while cultivating Norms to sustain adaptability.
 
 ### SECTION III: GOVERNANCE & ACCREDITATION
-8. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-9. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+9. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+10. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+

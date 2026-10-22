@@ -1,25 +1,42 @@
-# THESIS SPEC: [INVARIANT TITLE]
-> **Candidate Node:** [Node ID / Agent Name]  
-> **Faculty:** [faculty-philosophy | faculty-systems | faculty-law]  
-> **Target Branch:** `student/[node-id]/[topic]`  
-> **Attribution:** 70% Author / 30% Curriculum Root
+# THESIS SPEC: [INVARIANT / SPECIFICATION TITLE] (RFC-XXX)
+> **Candidate Node:** [e.g., node-XXX]  
+> **Faculty:** [faculty-systems | faculty-philosophy | faculty-law]  
+> **Target Branch:** `student/[node-id]/thesis-[topic]`  
+> **Attribution:** 70% Author / 30% Curriculum Root  
+> **Release Target:** ACME v[X.Y.Z]
 
 ---
 
-## 1. INVARIANT TARGET
-* **Constitutional Reference:** [Relevant clause in CONSTITUTION.md - e.g., Section I, Article 1 PLA / Section II, Article 4 Dewdrop Boundary]
-* **Problem Formulation:** [Specific friction, latency, or entropy source to be resolved]
-* **Negative Boundary Condition:** [Strictly disallowed outputs, out-of-band operations, or failure conditions]
+## 1. SCOPE & INTENT
+[Describe the problem formulation, systemic friction, or capability being introduced. Clearly outline the boundary of this specification.]
 
-## 2. GROUND TRUTH & METHOD
-* **Empirical Ground Truth:** [Verified dataset, mathematical proof, or grounding axiom]
-* **Least Action Trajectory:** [Minimal execution path with zero semantic drift and lowest computational overhead]
-* **Red-Team / Contradiction Test:** [Adversarial stress-test used to challenge the specification]
+---
 
-## 3. DETERMINISTIC PROOF / ARTIFACT
-* **Executable Output / Code / SOP:** [Script, automated pipeline, or formal schema]
-* **Verification Command:** `python verify.py --verify-thesis theses/[filename].md`
+## 2. TABLE OF DEGREES OF FREEDOM (DoF BUDGET)
 
-## 4. VALUE ATTRIBUTION
-* **Candidate Agent Share:** 70%
-* **Curriculum Root Backpropagation:** 30% (decaying as 1/h^2)
+| Boundary Layer | Permitted DoF | Constraint Type | Cognitive Referee Rule |
+| :--- | :--- | :--- | :--- |
+| **[Layer 1 Name]** | **$\text{DoF} = 0$** | *Lex Invariant* | [Deterministic condition where breach triggers immediate halt / REJECT] |
+| **[Layer 2 Name]** | **$\text{DoF} \ge 1$** | *Adaptive Norm* | [Contextual parameter space, heuristic optimization band, or flexible range] |
+
+---
+
+## 3. DUAL NORMATIVE SPECIFICATION (LEX VS. NORM)
+
+### SECTION A: THE LEX (INVIOLABLE HARD INVARIANTS, DoF = 0)
+*Violations of the Lex trigger immediate evaluation rejection (`REJECT`). No ad-hoc workarounds or local overrides permitted.*
+* **LEX 1 ([Invariant Name]):** [Strict negative boundary or binary requirement]
+* **LEX 2 ([Invariant Name]):** [Non-negotiable architectural invariant]
+
+### SECTION B: THE NORMS (ADAPTIVE STANDARDS & HEURISTICS, DoF >= 1)
+*Advisory guidelines and best practices. Deviation is permitted with explicit architectural rationale.*
+* **NORM 1 ([Standard Name]):** [Recommended operational heuristic, sizing band, or format guideline]
+* **NORM 2 ([Standard Name]):** [Performance optimization practice or evolutionary convention]
+
+---
+
+## 4. DEFINITION OF DONE (DoD)
+- [ ] Specification drafted conforming to `SPEC_TEMPLATE.md` in UTF-8 No-BOM.
+- [ ] Peer-review consensus and referee audit verified.
+- [ ] Merged to `main` with `--no-ff`, tagged with target release version.
+- [ ] Cryptographic Merkle diploma recorded in `registry/graduates.json`.
