@@ -68,8 +68,8 @@
   {
     "node_id": "node-007",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_007_CRUCIBLE_HARDENING.md",
-    "graduation_sha": "539d4b953b47a123125f82926b6008d355e5d50d",
+    "thesis_file": "theses/THESIS_007_DOMAIN_AGNOSTIC_PURITY.md",
+    "graduation_sha": "a3d8f81559d9c11b4a8ebb008168200d8e8337e2",
     "status": "ACCREDITED",
     "attribution": {
       "leaf_agent_share": 0.7,
