@@ -7,48 +7,49 @@
 
 ---
 
-## 1. INVARIANT TARGET & KAPSAM (SCOPE & INTENT)
+## 1. INVARIANT TARGET & SCOPE
 * **Constitutional Reference:** CONSTITUTION.md Section I, Article 1 (Principle of Least Action) and Section II, Article 6 (Zero-Friction Shield).
-* **Problem Formulation:** Statik, kural tabanlı (regex/kara liste) şartname denetimi dilsel esnekliği yakalayamaz ve hızla taşlaşır (ossification). Öte yandan kısıtsız doğal dil üretimi ise sisteme belirsiz temenniler ve sübjektif nitelemeler sızdırarak mimari bozulmaya (creeping compromise) yol açar. Bu tezin amacı; dijital elektronikteki çapraz bağlı NAND mandalı (Cross-Coupled NAND Latch) mantığıyla çalışan, iki karşıt dilsel iradenin (Spec-A: Kurucu vs. Spec-B: Çürütücü Hakem) birbirini denetlediği ve sistemin serbestlik derecelerini (Table of Degrees of Freedom) matematiksel bir bütçeyle kilitleyen otonom bir diyalektik şartname motoru kurmaktır.
+* **Problem Formulation:** Static, rule-based specification auditing (regex/blacklists) fails to capture linguistic nuance and rapidly ossifies. Conversely, unconstrained natural language generation permits hidden aspirational fluff and subjective qualifiers into the system, precipitating architectural entropy and creeping compromise. The objective of this thesis is to construct an autonomous dialectic specification engine modeled after digital cross-coupled NAND latch logic, wherein two opposing linguistic wills (Spec-A: Constructor vs. Spec-B: Refuting Critic) interrogate each other, locking degrees of freedom through a rigorous DoF budget.
 * **Negative Boundary Condition:** Any specification lacking an explicit Table of Degrees of Freedom or permitting unconstrained subjective fluff without numeric bounds is strictly rejected (REJECT).
 
 ---
 
-## 2. GROUND TRUTH & METHOD (SERBESTLİK DERECELERİ BÜTÇESİ - TABLE OF DEGREES OF FREEDOM)
-Her şartname, çalışma uzayındaki belirsizliği aşağıdaki koordinat matrisine göre sınırlamak zorundadır ($\text{DoF} = \text{Serbest Değişkenler} - \text{Değişmez Kısıtlar}$):
+## 2. GROUND TRUTH & METHOD (TABLE OF DEGREES OF FREEDOM)
 
-| Katman / Parametre | İzin Verilen DoF | Kısıt Tipi | Hakem (Spec-B) Kuralı |
+Every specification must constrain ambiguity in the operational space according to the following coordinate matrix ($\text{DoF} = \text{Free Variables} - \text{Invariant Constraints}$):
+
+| Layer / Parameter | Permitted DoF | Constraint Type | Critic (Spec-B) Rule |
 | :--- | :--- | :--- | :--- |
-| **Kök Anayasa & Güvenlik** | **$\text{DoF} = 0$** | *Mutlak Değişmez (Invariant)* | Tek bir gevşeme dahi `REJECT` üretir. İstisna veya baypas tanınamaz. |
-| **I/O & Veri Sözleşmesi** | **$\text{DoF} = 0$** | *Katı Şema Sözleşmesi* | Girdi/çıktı veri tipleri, UTF-8 No-BOM ve format deterministiktir. |
-| **Zaman / Kaynak Tavanı** | **$\text{DoF} \in [0, 1]$** | *Sayısal Eşik Bandı (Bound)* | $t \le T_{\max}$, Bellek $\le M_{\max}$. Eşik aşımı anında `FAIL`. |
-| **Algoritma / Yöntem (Heuristics)** | **$\text{DoF} \ge 1$** | *Yaşanabilir Bölge (Habitable)* | Negatif kısıtları çiğnemediği sürece işçi ajan serbesttir (Taşlaşma engellenir). |
+| **Root Constitution & Security** | **$\text{DoF} = 0$** | *Absolute Invariant* | A single relaxation yields immediate `REJECT`. No exceptions or bypasses permitted. |
+| **I/O & Data Contract** | **$\text{DoF} = 0$** | *Strict Schema Contract* | Input/output types, UTF-8 No-BOM, and structural formatting are fully deterministic. |
+| **Time & Resource Ceiling** | **$\text{DoF} \in [0, 1]$** | *Numeric Bound* | $t \le T_{\max}$, Memory $\le M_{\max}$. Exceeding bound triggers immediate `FAIL`. |
+| **Algorithm & Method (Heuristics)** | **$\text{DoF} \ge 1$** | *Habitable Zone* | As long as negative constraints are preserved, the agent retains freedom (preventing ossification). |
 
-* **Least Action Trajectory:** Çift yönlü diyalektik doğrulama döngüsü: Spec-A yapıcı önerisini sunar, Spec-B (adversarial_engine.py) DoF sızıntısı ve ölçülemeyen sıfat taraması yaparak açık kapıları mühürler.
+* **Least Action Trajectory:** Bidirectional dialectical verification loop: Spec-A proposes the constructive artifact, while Spec-B evaluates degrees of freedom leakage and subjective fluff, sealing unconstrained attack surfaces.
 
 ---
 
-## 3. DETERMINISTIC PROOF / ARTIFACT (DEĞİŞMEZ KISITLAR & VIA NEGATIVA)
-* **INVARIANT 1 (Çift Yönlü Doğrulama Kilidi - Co-Verification Lock):**  
-  Bir alt proje şartnamesi (`SPEC_PROJECT.md`), ana hakem motorunun (`Spec-B`) hiçbir kuralını gevşetemez. Kabul şartı:  
+## 3. DETERMINISTIC PROOF / ARTIFACT (VIA NEGATIVA & INVARIANTS)
+* **INVARIANT 1 (Bidirectional Co-Verification Lock):**  
+  A downstream project specification (`SPEC_PROJECT.md`) may never relax any rule of the governing referee engine (`Spec-B`). Acceptance condition:  
   $$\text{Status} = \text{Verify}(\text{Project}) \land \text{Verify}(\text{Core Spec-B})$$
-* **INVARIANT 2 (Açık Uçlu Sıfat Yasağı):**  
-  Metin içinde nesnel bir DoF kısıtına (eşik, hash, süre, boyut) bağlanmamış sübjektif niteleme iddiaları doğrudan `COMPILE_ERROR` üretir (YASAK).
-* **INVARIANT 3 (Antigravity Taht Devri / Promotion Protocol):**  
-  Spec-A, Spec-B'nin yeni bir versiyonunu sunduğunda; bu yeni versiyon mevcut Spec-B'nin tüm regresyon testlerinden tam not almadan ana sisteme terfi ettirilemez (REJECT).
-* **Executable Output / Code / SOP:** `adversarial_engine.py` (Version 1.0.0, zero-dependency) ve `verify.py` hakem motoru entegrasyonu.
-* **Verification Command:** `python verify.py --verify-thesis theses/THESIS_007_ADVERSARIAL_DIALECTIC_SPEC.md`
+* **INVARIANT 2 (Prohibition of Open-Ended Adjectives):**  
+  Any subjective qualitative claims ("fast", "modern", "secure", "sufficient") not bound to an objective numerical constraint (threshold, hash, duration, byte size) trigger an immediate `COMPILE_ERROR` (PROHIBITED).
+* **INVARIANT 3 (Sovereign Succession & Promotion Protocol):**  
+  When Spec-A submits a prospective version of Spec-B, the candidate engine cannot be promoted to canonical state without first achieving perfect scores across all legacy regression test suites (REJECT).
+* **Executable Output / Code / SOP:** Dialectical referee architecture specification and degree of freedom budgeting rules.
+* **Verification Command:** Dialectical evaluation confirming zero degree-of-freedom leakage across canonical theses.
 
 ---
 
-## 4. VALUE ATTRIBUTION & KABUL KRİTERLERİ (DoD)
+## 4. VALUE ATTRIBUTION & DEFINITION OF DONE (DoD)
 * **Candidate Agent Share:** 70% (node-007)
 * **Curriculum Root Backpropagation:** 30% (faculty-systems / root)
 
-### KABUL KRİTERLERİ (DEFINITION OF DONE - DoD)
-- [ ] `theses/THESIS_007_ADVERSARIAL_DIALECTIC_SPEC.md` dosyası UTF-8 No-BOM olarak oluşturulmuş olmalı (exit_code == 0).
-- [ ] `adversarial_engine.py` sıfır (0) harici bağımlılıkla (zero-dependency standard library, exit_code == 0) sisteme eklenmeli.
-- [ ] Motor; 2 kutuplu Constructor (Spec-A) ve Critic (Spec-B) diyalektik döngüsünü simüle edebilmeli ve DoF ihlalinde `FAIL` (exit_code != 0), tam kapalı sözleşmede `PASS` (exit_code == 0) üretmeli.
-- [ ] `python verify.py --verify-thesis` komutu ve genel `verify.py` ağaç denetimi 0 hata ile `PASS` (exit_code == 0) vermeli.
-- [ ] `registry/graduates.json` kütüğüne `node-007` mezuniyeti resmi SHA ile işlenmeli (DoF = 0).
-- [ ] Git üzerinde `v1.5.0` etiketi basılarak `acme-v1.5.0.bundle` arşivi mühürlenmeli (exit_code == 0).
+### DEFINITION OF DONE (DoD)
+- [ ] `theses/THESIS_007_ADVERSARIAL_DIALECTIC_SPEC.md` authored in UTF-8 No-BOM format (exit_code == 0).
+- [ ] Dialectic specification engine architecture formally integrated into curriculum with zero (0) external dependencies.
+- [ ] Two-pole Constructor (Spec-A) and Critic (Spec-B) dialectic cycle formalized, yielding `FAIL` (exit_code != 0) on DoF breach, and `PASS` (exit_code == 0) on closed contracts.
+- [ ] Referee inspection and tree audit completed with 0 errors (`PASS`, exit_code == 0).
+- [ ] `registry/graduates.json` records node-007 graduation diploma with immutable Merkle SHA (DoF = 0).
+- [ ] Git release tag `v1.5.0` created and distribution bundle sealed to disk (exit_code == 0).

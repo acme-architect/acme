@@ -7,39 +7,48 @@
 
 ---
 
-## 1. KAPSAM VE ÇEKİRDEK NİYET (SCOPE & INTENT)
-ACME bir yazılım projesi, bir Python paketi veya yürütülebilir bir script çöplüğü değildir. ACME; büyük dil modellerinin (LLM) latent uzayını hizalayan, anlamsal sınırları çizen ve zemin gerçeğini tutan bağımsız bir bilişsel doktrin deposudur.
-Kök depoya mekanik kod dosyalarının (`.py`), test koşucuların veya regex kalıplarının sokulması, kütüphanenin içine beton mikseri sokmakla eşdeğer bir mimari kirlenmedir (domain leakage).
-Bu şartnamenin amacı; ACME çekirdeğini tek bir bayt dahi kod barındırmayan saf bir NLP/şartname külliyatına dönüştürmek; yürütme, test ve derleme mekanizmalarını tamamen dış şantiye/harness alanlarına (`acme-lab`, sandbox projeleri) tahliye etmektir.
+## 1. INVARIANT TARGET & SCOPE
+* **Constitutional Reference:** CONSTITUTION.md Section I, Article 1 (Principle of Least Action) and Section II, Article 4 (Dewdrop Boundary Invariant).
+* **Problem Formulation:** ACME is not a traditional software repository, a Python package, or a script harness. ACME is an independent cognitive doctrine repository designed to align the latent space of large language models (LLMs), establish semantic boundaries, and hold sovereign ground truth. Injecting mechanical code files (`.py`), test runners, or regex filters into the root repository introduces severe domain leakage and metabolic friction.
+* **Negative Boundary Condition:** Any execution mechanics, script runners, or external runtime dependencies placed within the core repository are strictly rejected (REJECT). All execution mechanisms are strictly ejected to external laboratory harnesses (`acme-lab`, sandbox projects).
 
 ---
 
-## 2. SERBESTLİK DERECELERİ BÜTÇESİ (TABLE OF DEGREES OF FREEDOM)
+## 2. GROUND TRUTH & METHOD (TABLE OF DEGREES OF FREEDOM)
 
-| Katman / Varlık | İzin Verilen DoF | Kısıt Tipi | Bilişsel Hakem Kuralı |
+Every specification must constrain ambiguity in the operational space according to the following degrees of freedom budget:
+
+| Layer / Entity | Permitted DoF | Constraint Type | Cognitive Invariant Rule |
 | :--- | :--- | :--- | :--- |
-| **Kök Depo Dosya Türleri** | **$\text{DoF} = 0$** | *Format Değişmezi* | Depoda `.md` ve `.json` (kütük) haricinde hiçbir programlama dili uzantısı (`.py`, `.sh`, `.js`, `.bin`) bulunamaz. Tespit anında ret. |
-| **Anayasal Kurallar** | **$\text{DoF} = 0$** | *Salt Metin / Anayasa* | Yalnızca `CONSTITUTION.md` ve `theses/` altındaki NLP şartnameleri geçerlidir. |
-| **Yürütme ve Test Mekaniği** | **$\text{DoF} = 0$** | *Tam Yalıtım (Ejection)* | Tüm Python testleri, hakem scriptleri ve harness araçları `acme-lab` deposuna aittir; ACME kökünde barınamaz. |
-| **Semantik Çıkarım (NLP Logic)** | **$\text{DoF} \ge 1$** | *Akışkan Anlambilim* | Modeller, şartnameleri regex ile değil, doğal dilin anlamsal çıkarımıyla (semantic entailment) doğrular. |
+| **Root Repository File Types** | **$\text{DoF} = 0$** | *Format Invariant* | No programming language source code (`.py`, `.sh`, `.js`, `.bin`) may exist in the repository; only `.md` and `.json` are permitted. Violation triggers immediate rejection. |
+| **Constitutional Precepts** | **$\text{DoF} = 0$** | *Pure Text Invariant* | Only `CONSTITUTION.md` and formal NLP specifications under `theses/` and `docs/` govern state. |
+| **Execution & Test Mechanics** | **$\text{DoF} = 0$** | *Complete Isolation (Ejection)* | All test suites, referee engines, and harness runners belong exclusively to `acme-lab`; none may reside in ACME core. |
+| **Semantic Entailment (NLP Logic)** | **$\text{DoF} \ge 1$** | *Fluid Semantics* | Models evaluate specifications through natural language semantic entailment and discrete contracts rather than rigid regex heuristics. |
+
+* **Least Action Trajectory:** Radical code purge via GitOps, archiving all execution-plane scripts into git Merkle history, elevating ACME core into a pure natural language cognitive sanctuary.
 
 ---
 
-## 3. DEĞİŞMEZ KISITLAR (VIA NEGATIVA & INVARIANTS)
-*   **INVARIANT 1 (Sıfır Kod Değişmezi - Zero-Code Invariant):**  
-    Kök depoda (`acme`) hiçbir `.py` dosyası (`verify.py`, `spec_compiler.py`, `adversarial_engine.py` dahil) ve `tests/` dizini yer alamaz. Varlıkları doğrudan anayasal ihlaldir.
-*   **INVARIANT 2 (İki Düzlemli Mimari Yalıtımı):**  
-    Bilişsel Düzlem (ACME Core: Saf Doktrin) ile İcra Düzlemi (`acme-lab` & `projects/`: Çalıştırılabilir Kod) fiziksel olarak farklı depolarda yaşar. ACME sadece şartname üretir ve saklar; çalıştırma sorumluluğunu üstlenmez.
-*   **INVARIANT 3 (Doğal Dil Yürütülebilirliği):**  
-    Tüm SPEC ve Tez belgeleri; çalıştırılması için Python'a muhtaç olmayan, salt doğal dille tanımlanmış girdi/çıktı sözleşmeleri, negatif kısıtlar (Via Negativa) ve nesnel kabul kapıları (DoD) içermek zorundadır.
+## 3. DETERMINISTIC PROOF / ARTIFACT (VIA NEGATIVA & INVARIANTS)
+* **INVARIANT 1 (Zero-Code Invariant):**  
+  No `.py` files (`verify.py`, `spec_compiler.py`, `adversarial_engine.py` included) and no `tests/` directories shall exist in the ACME core repository. Their presence constitutes a constitutional breach.
+* **INVARIANT 2 (Dual-Plane Architectural Decoupling):**  
+  The Cognitive Plane (ACME Core: Pure Doctrine) and the Execution Plane (`acme-lab` & `projects/`: Executable Harness) are physically decoupled into separate repositories. ACME authoritatively defines and stores specifications; it undertakes no runtime execution overhead.
+* **INVARIANT 3 (Natural Language Executability):**  
+  All specifications and theses must formulate contracts, negative boundaries (Via Negativa), and objective gates (DoD) purely through natural language, independent of external interpreter runtimes.
+* **Verification Command:** File audit verifying zero `.py` files in root tree (`Get-ChildItem -Recurse -Filter *.py` returns 0).
 
 ---
 
-## 4. KABUL KRİTERLERİ (DEFINITION OF DONE - DoD)
-- [ ] `theses/THESIS_012_PURE_NLP_COGNITIVE_CORE.md` dosyası UTF-8 No-BOM formatında oluşturulmuş olmalı.
-- [ ] `verify.py`, `spec_compiler.py`, `adversarial_engine.py` dosyaları ve `tests/` klasörü `acme` kök deposundan Git geçmişi korunarak silinmeli (`git rm`).
-- [ ] Kök depoda `Get-ChildItem -Recurse -Filter *.py` taraması 0 (sıfır) dosya döndürmeli.
-- [ ] `registry/graduates.json` kütüğüne 12. akredite mezun olarak `node-012` diploması işlenmeli.
-- [ ] Değişiklikler `main` dalına `--no-ff` ile birleştirilmeli.
-- [ ] `v2.0.0` sürüm etiketi basılmalı ve `acme-v2.0.0.bundle` arşivi diske mühürlenmeli.
-- [ ] Çalışma ağacı `working tree clean` olmalı.
+## 4. VALUE ATTRIBUTION & DEFINITION OF DONE (DoD)
+* **Candidate Agent Share:** 70% (node-012)
+* **Curriculum Root Backpropagation:** 30% (faculty-systems / root)
+
+### DEFINITION OF DONE (DoD)
+- [ ] `theses/THESIS_012_PURE_NLP_COGNITIVE_CORE.md` authored in UTF-8 No-BOM format.
+- [ ] `verify.py`, `spec_compiler.py`, `adversarial_engine.py`, `spec_designer.py`, and `tests/` permanently removed from ACME core (`git rm`).
+- [ ] Recursive repository scan confirms 0 (zero) `.py` files present in ACME core.
+- [ ] `registry/graduates.json` records node-012 graduation diploma for pure NLP cognitive core.
+- [ ] Main branch merged with non-fast-forward (`--no-ff`) commit.
+- [ ] Release tag `v2.0.0` signed and sealed, and `acme-v2.0.0.bundle` written to disk.
+- [ ] Working tree confirmed clean.

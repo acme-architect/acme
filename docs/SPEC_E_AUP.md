@@ -1,76 +1,76 @@
-# SPEC-E-AUP: EVRİMSEL AJAN TABANLI BİRLEŞİK SÜREÇ (THE AUTOPOIETIC SYMBIOSIS SPEC)
+# SPEC-E-AUP: EVOLUTIONARY AGENT-BASED UNIFIED PROCESS (THE AUTOPOIETIC SYMBIOSIS SPEC)
 
-> **Statü:** CANONICAL / INVARIANT-CORE  
-> **Kapsam:** İnsan-Makine Simbiyozu ve Otopoetik Öz-Evrim Döngüsü  
-> **Dayanak:** En Az Eylem İlkesi (PLA), Sibernetik Negatif Geri Besleme, Maturana-Varela Otopoezi  
-
----
-
-### 1. KAPSAM VE SİMBİYOTİK NİYET (SCOPE & INTENT)
-
-Bu şartname; harici bir yazılım ürünü geliştirmek için değil, insan ile yapay zekâ arasındaki bilişsel işbölümünü yöneten **otopoetik bir yaşam döngüsü** işletmek için tanımlanmıştır.
-
-* **İnsan Rolü (Biyolojik Çapa / Mimar):** Sistemin nihai teleolojik hedefini (attractor), ahlaki/hukuki sınırlarını belirler ve sistemin enerjisini korur.
-* **Makine Rolü (Polimat İcra Ajanı):** Verilen niyeti en az eylemle (PLA) somut şartnamelere dönüştürür, sürtünmeyle karşılaşır ve elde ettiği dersi sisteme bağışıklık aşısı olarak geri besler.
-* **Çekirdek Amaç:** Her iterasyonun sonunda sistemin kendi süreçlerini, kurallarını ve şartnamelerini güncelleyerek bir sonraki iterasyonu **daha düşük entropiyle, daha hızlı ve hedefe daha yakın** tamamlamasını sağlamaktır.
+> **Status:** CANONICAL / INVARIANT-CORE  
+> **Scope:** Human-Machine Symbiosis and Autopoietic Self-Evolution Loop  
+> **Foundations:** Principle of Least Action (PLA), Cybernetic Negative Feedback, Maturana-Varela Autopoiesis  
 
 ---
 
-### 2. SERBESTLİK DERECELERİ BÜTÇESİ (TABLE OF DEGREES OF FREEDOM)
+### 1. SCOPE & SYMBIOTIC INTENT
 
-| Süreç Katmanı | İzin Verilen DoF | Kısıt / Eşik Türü | Otopoetik Kural |
+This specification is defined not for developing external software products, but for operating an **autopoietic lifecycle** governing the cognitive division of labor between human and artificial intelligence.
+
+* **Human Role (Biological Anchor / Architect):** Determines the system's ultimate teleological attractor, ethical and statutory boundaries, and conserves system energy.
+* **Machine Role (Polymath Execution Agent):** Translates raw intent into concrete specifications via the Principle of Least Action (PLA), encounters real-world friction, and backpropagates extracted lessons as systemic immunological inoculation.
+* **Core Objective:** To ensure that at the close of every iteration, the system updates its internal processes, constraints, and specifications, completing subsequent iterations with **lower entropy, higher velocity, and tighter convergence to intent**.
+
+---
+
+### 2. TABLE OF DEGREES OF FREEDOM (DoF BUDGET)
+
+| Process Layer | Permitted DoF | Constraint / Threshold Type | Autopoietic Rule |
 | :--- | :--- | :--- | :--- |
-| **Biyolojik Çapa (Human Anchor)** | **$\text{DoF} = 0$** | *Mutlak Değişmez (Invariant)* | Sahipsiz veya insansız hiçbir ajan özerk karar alamaz; niyet daima biyolojik merkeze zincirlenir. |
-| **Süreç Sözleşmesi (E-AUP)** | **$\text{DoF} = 0$** | *Protokol Değişmezi* | Bir görevin retrospektifi ve ders çıkarımı yapılmadan sonraki iterasyona geçilemez (Anti-Amnesia). |
-| **Metot ve Çözüm Arayışı** | **$\text{DoF} \ge 1$** | *Heuristic Serbestlik* | Polimat ajan, negatif kısıtları ihlal etmediği sürece problemi çözmek için istediği anlamsal yolu seçebilir. |
-| **Geri Yayılım (Backpropagation)** | **$\text{DoF} = 1$** | *Tekil Gelişim Doğrultusu* | Çıkarılan her yeni ders, bir önceki sistem durumundan mutlak olarak daha düşük bir hata payı (MSE) hedeflemelidir. |
+| **Biological Anchor (Human Anchor)** | **$\text{DoF} = 0$** | *Absolute Invariant* | No orphaned or autonomous agent may enact sovereign decisions; intent remains permanently chained to the biological root. |
+| **Process Contract (E-AUP)** | **$\text{DoF} = 0$** | *Protocol Invariant* | No iteration may advance without rigorous retrospective synthesis and lesson extraction (Anti-Amnesia Gate). |
+| **Method & Solution Search** | **$\text{DoF} \ge 1$** | *Heuristic Freedom* | The polymath agent retains full semantic freedom to explore solution paths, provided negative invariants remain unviolated. |
+| **Backpropagation Direction** | **$\text{DoF} = 1$** | *Monotonic Convergence* | Every extracted lesson must demonstrably yield a strictly lower expected error delta compared to prior state. |
 
 ---
 
-### 3. DEĞİŞMEZ KISITLAR (VIA NEGATIVA & INVARIANTS)
+### 3. NEGATIVE INVARIANTS (VIA NEGATIVA)
 
-* **INVARIANT 1 (Ders Çıkarım Zorunluluğu - The Friction Gate):**  
-  Sürtünme (hata, gecikme, anlamsal gürültü, ret kararı) yaşamış hiçbir süreç, "olduğu gibi" kapatılamaz. Her sürtünme; sisteme ya yeni bir **Negatif Kısıt (Yasak)** ya da iyileştirilmiş bir **Kabul Kriteri (DoD)** olarak tescil edilmek zorundadır.
+* **INVARIANT 1 (Mandatory Lesson Extraction - The Friction Gate):**  
+  No process that encounters friction (failure, latency, semantic noise, or rejection) may be closed in place. Every friction point must be permanently codified into the system as either a new **Negative Constraint (Prohibition)** or a refined **Definition of Done (DoD)** threshold.
 
-* **INVARIANT 2 (Kör Döngü Yasağı - Anti-Looping):**  
-  Bir ajan aynı hata veya zafiyetle iki kez karşılaşamaz. Eğer bir hata ikinci kez tekrar ediyorsa, bu bir icra hatası değil, üst süreç şartnamesinin (E-AUP) derleme hatasıdır; süreç derhal durdurulur ve anayasa gözden geçirilir.
+* **INVARIANT 2 (Anti-Looping Invariant):**  
+  An agent shall never encounter the identical vulnerability or failure mode twice. A recurring failure is not an execution flaw; it is a compilation defect in the governing process specification (E-AUP). The process halts immediately for constitutional review.
 
-* **INVARIANT 3 (Statik Rol Yasağı):**  
-  Sistemde önceden tanımlanmış sabit, bürokratik ajan orduları yer alamaz. Ajan, E-AUP sürecinin o anki fazına göre dinamik olarak morf olan tekil bir polimat formunda çalışır.
+* **INVARIANT 3 (Prohibition of Static Bureaucracy):**  
+  The system shall harbor no static, pre-allocated bureaucratic agent hierarchies. The agent operates as a singular polymath dynamically morphing according to the current phase of the E-AUP lifecycle.
 
 ---
 
-### 4. DÖNGÜSEL İŞLEYİŞ: E-AUP OTOPOETİK METABOLİZMASI
+### 4. CYCLICAL OPERATION: E-AUP AUTOPOIETIC METABOLISM
 
-Sistem, enerjisini ve bilgisini şu 4 adımlı kapalı çevrimle yeniler:
+The ecosystem regenerates energy and knowledge through a 4-stage closed cybernetic loop:
 
 ```text
-    [1. HEDEF & NİYET] (Mimar / Biyolojik Kök)
+    [1. GOAL & INTENT] (Architect / Biological Root)
              │
              ▼
-    [2. POLİMATİK İCRA] (En Az Eylem & DoF Sınırı)
+    [2. POLYMATH EXECUTION] (Principle of Least Action & Bounded DoF)
              │
              ▼
-    [3. SÜRTÜNME HASADI] (Gürültü, Hata ve Direnç Analizi)
+    [3. FRICTION HARVESTING] (Noise, Latency & Resistance Analysis)
              │
              ▼
-    [4. GERİ YAYILIM & MUTASYON] (ACME Külliyatının Güncellenmesi)
+    [4. BACKPROPAGATION & MUTATION] (ACME Corpus Update)
              │
-             └──────> [Bir Sonraki İterasyona Sıfır Borçla Devir]
+             └──────> [Handoff to Next Iteration with Zero Technical Debt]
 ```
 
-1. **Hedef ve Niyet (Goal Alignment):** Mimar, çözülmesi gereken alanı veya problemi sisteme verir; sistem bunu tersine mühendislikle (Goal-to-Spec) atomik bir sözleşmeye çevirir.
-2. **Polimatik İcra (Action):** Ajan görevi üstlenir. İcra sırasında sahanın gerçek pürüzleriyle (dosya anomalileri, mantıksal çıkmazlar, kural eksiklikleri) yüzleşir.
-3. **Sürtünme Hasadı (Post-Mortem Extraction):** Görev bittiğinde veya tıkandığında, "işin yapılmış olması" başarı sayılmaz. İşlem sırasında harcanan fazladan efor, karşılaşılan direnç ve saptanan gürültü ayıklanır (posa atılır, öz tutulur).
-4. **Geri Yayılım (Autopoietic Backpropagation):** Çıkarılan bu öz ders, ACME'ye yeni bir **Tez (Thesis/RFC)** veya güncellenmiş bir **Şartname (Spec)** olarak sunulur. Kabul edildiğinde sistemin bir sonraki görevi icra etme kapasitesi katlanarak artar.
+1. **Goal Alignment:** The Architect supplies the target domain or problem. The ecosystem applies Goal-to-Spec inverse engineering to derive an atomic contract.
+2. **Polymath Execution:** The agent executes the contract, confronting ground-truth friction (file anomalies, logical impasses, boundary ambiguities).
+3. **Friction Harvesting:** Mere task completion is not deemed success. Extraneous effort expended, encountered resistance, and isolated semantic noise are triaged (slag discarded, invariant essence retained).
+4. **Autopoietic Backpropagation:** The extracted lesson is submitted to ACME as a formal **Thesis (RFC)** or an updated **Specification (SPEC)**. Upon accreditation, the ecosystem's future execution capacity compounds monotonically.
 
 ---
 
-### 5. KABUL KRİTERLERİ (DEFINITION OF DONE - DoD)
+### 5. DEFINITION OF DONE (DoD)
 
-Bir E-AUP döngüsünün başarıyla tamamlandığı yalnızca şu ikili koşulların sağlanmasıyla tescil edilir:
+An E-AUP lifecycle iteration is certified as complete only upon meeting the following criteria:
 
-- [ ] İcra edilen iş, tanımlanan kabul eşiklerini tam karşılamış olmalı.
-- [ ] Görev sonunda en az 1 (bir) adet somut "Öğrenilen Ders / Süreç İyileştirmesi" (Retrospective Delta) raporlanmış olmalı.
-- [ ] Tespit edilen bu ders, ACME anayasasına veya ilgili fakülte şartnamesine geriye dönük işlenmiş (backpropagated) olmalı.
-- [ ] Bir sonraki iterasyon için gereken tahmini serbestlik derecesi (DoF) ve işlem maliyeti (Compute) matematiksel olarak düşürülmüş olmalı.
+- [ ] Executed work strictly satisfies all defined acceptance thresholds.
+- [ ] At least one concrete Retrospective Delta (Learned Lesson / Process Invariant) is formally documented upon task conclusion.
+- [ ] The identified lesson is backpropagated into the ACME constitution or respective faculty foundational curriculum.
+- [ ] Projected degrees of freedom (DoF) and compute overhead for subsequent iterations are mathematically reduced.

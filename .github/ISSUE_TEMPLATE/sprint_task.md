@@ -7,12 +7,12 @@ assignees: ''
 ---
 
 ### Problem / Vulnerability (Raw Intent)
-<!-- Sahadaki sürtünme noktası, problem tanımı veya araştırma niyeti -->
+<!-- Ground-truth friction point, problem formulation, or research intent -->
 
 ### Proposed Solution / Thesis
-<!-- Önerilen şartname veya mimari mekanizma -->
+<!-- Proposed specification or architectural mechanism -->
 
 ### Acceptance Criteria (DoD)
-- [ ] verify.py denetiminden PASS alma
-- [ ] Sıfır bağımlılıklı test koşusu
-- [ ] Invariant koruması
+- [ ] Conforms to repository architectural purity requirements
+- [ ] Zero external dependencies verified
+- [ ] Invariant boundary conditions preserved

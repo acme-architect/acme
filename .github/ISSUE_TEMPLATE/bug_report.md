@@ -7,11 +7,11 @@ assignees: ''
 ---
 
 ### Broken Invariant / Error Trace
-<!-- Kırılan kural (INV-XXX) veya traceback çıktısı -->
+<!-- Violated invariant (INV-XXX) or error details -->
 
 ### Reproduction Steps
 1. ...
 2. ...
 
 ### Expected State
-<!-- Olması gereken zemin gerçeği -->
+<!-- Intended ground truth and expected state -->
