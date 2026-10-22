@@ -163,6 +163,17 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-016",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_016_LEX_NORM_DUAL_ONTOLOGY.md",
+    "graduation_sha": "a21e8de916f25cc76bf55abea3ece7afa5a56059",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
 
