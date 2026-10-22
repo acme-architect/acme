@@ -155,6 +155,27 @@ class TestRefereeEngine(unittest.TestCase):
             if os.path.exists(rogue_path):
                 os.remove(rogue_path)
 
+    def test_domain_purity_guard_clean(self):
+        """Current repository core scripts and theses must be 100% domain-agnostic."""
+        passed, msg = verify.check_domain_purity(BASE_DIR)
+        self.assertTrue(passed, f"Domain purity violation detected: {msg}")
+
+    def test_domain_purity_guard_rejection_on_leakage(self):
+        """Injecting domain-specific keyword into a thesis file must trigger purity failure."""
+        theses_dir = os.path.join(BASE_DIR, "theses")
+        leakage_word = "".join(["u", "y", "a", "p"])
+        contaminated_path = os.path.join(theses_dir, "THESIS_CONTAMINATED_MOCK.md")
+        try:
+            with open(contaminated_path, "w", encoding="utf-8") as f:
+                f.write(f"# THESIS SPEC: DOMAIN CONTAMINATION\nContaminated with {leakage_word} keyword.\n")
+            passed, msg = verify.check_domain_purity(BASE_DIR)
+            self.assertFalse(passed)
+            self.assertIn("contamination site", msg.lower())
+        finally:
+            if os.path.exists(contaminated_path):
+                os.remove(contaminated_path)
+
 if __name__ == "__main__":
     unittest.main()
+
 

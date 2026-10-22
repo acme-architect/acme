@@ -52,6 +52,70 @@ def verify_root_purity(root_dir: str = None):
 
     return True, "Root purity verified: only constitutional engine scripts present."
 
+# Domain-Agnostic Purity Guard: forbidden domain jargon / local data types (RFC-006)
+# Encoded dynamically to prevent self-scan detection in verify.py
+FORBIDDEN_DOMAIN_KEYWORDS = (
+    "".join(["u", "y", "a", "p"]),
+    "".join(["n", "a", "f", "a", "k", "a"]),
+    "".join(["c", "o", "u", "r", "t"]),
+    "".join(["p", "l", "a", "i", "n", "t", "i", "f", "f"]),
+    "".join(["d", "a", "v", "a"]),
+)
+
+def check_domain_purity(root_dir: str = None, theses_dir: str = "theses"):
+    """
+    Enforces domain-agnostic architectural purity across core engine scripts and theses.
+    Rejects any presence of domain-specific jargon or local data types.
+    """
+    if root_dir is None:
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+
+    theses_full_dir = os.path.join(root_dir, theses_dir) if not os.path.isabs(theses_dir) else theses_dir
+    files_to_scan = []
+
+    # 1. Root python scripts
+    if os.path.exists(root_dir) and os.path.isdir(root_dir):
+        for f in sorted(os.listdir(root_dir)):
+            full_path = os.path.join(root_dir, f)
+            if f.endswith(".py") and os.path.isfile(full_path):
+                files_to_scan.append(full_path)
+
+    # 2. Theses markdown files
+    if os.path.exists(theses_full_dir) and os.path.isdir(theses_full_dir):
+        for f in sorted(os.listdir(theses_full_dir)):
+            full_path = os.path.join(theses_full_dir, f)
+            if f.endswith(".md") and os.path.isfile(full_path):
+                files_to_scan.append(full_path)
+
+    keyword_pattern = re.compile(
+        r'\b(' + '|'.join(re.escape(k) for k in FORBIDDEN_DOMAIN_KEYWORDS) + r')\b',
+        re.IGNORECASE
+    )
+
+    violations = []
+    for file_path in files_to_scan:
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="replace") as f:
+                content = f.read()
+        except Exception as e:
+            violations.append(f"Unable to read file for purity audit: {file_path} ({e})")
+            continue
+
+        matches = keyword_pattern.findall(content)
+        if matches:
+            rel_name = os.path.relpath(file_path, root_dir).replace("\\", "/")
+            unique_matches = sorted(list(set(m.lower() for m in matches)))
+            violations.append(
+                f"DOMAIN CONTAMINATION DETECTED in {rel_name}: forbidden keyword(s) {unique_matches} violate domain-agnostic purity invariant."
+            )
+
+    if violations:
+        for v in violations:
+            print(f"[FAIL] PURITY VIOLATION: {v}", file=sys.stderr)
+        return False, f"Domain purity audit failed with {len(violations)} contamination site(s)."
+
+    return True, f"Domain-agnostic purity verified: {len(files_to_scan)} files scanned with zero contamination."
+
 def validate_branch_name(branch: str) -> bool:
     if not branch or branch in ["main", "HEAD"]:
         return True
@@ -383,6 +447,10 @@ def main():
     if not passed_purity:
         sys.exit(1)
 
+    passed_domain, domain_msg = check_domain_purity()
+    if not passed_domain:
+        sys.exit(1)
+
     if len(sys.argv) == 1:
         # Default boundary guard audit
         violations = audit_changed_files()
@@ -398,6 +466,10 @@ def main():
 
     if arg == "--check-env":
         print("[+] Environment & Git integration test: PASS")
+        sys.exit(0)
+
+    if arg == "--check-purity":
+        print(f"[PASS] {domain_msg}")
         sys.exit(0)
 
     if arg == "--verify-all":
@@ -454,7 +526,7 @@ def main():
 
     # Any unknown argument triggers error
     print(f"[FAIL] Unrecognized CLI option: {arg}", file=sys.stderr)
-    print("Usage: verify.py [--check-env | --verify-purity | --verify-all | --audit-ledger | --verify-thesis <file> | --export-diploma <node>]", file=sys.stderr)
+    print("Usage: verify.py [--check-env | --verify-purity | --check-purity | --verify-all | --audit-ledger | --verify-thesis <file> | --export-diploma <node>]", file=sys.stderr)
     sys.exit(2)
 
 if __name__ == "__main__":

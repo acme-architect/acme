@@ -34,6 +34,45 @@ def scan_theses(theses_dir="theses"):
             theses.append(f)
     return theses
 
+# Universal structural/teleological invariant mapping: operational verbs & constraints to foundational theses
+TELEOLOGICAL_INVARIANT_MAP = {
+    "zero-dependency": ["THESIS_001_LEAST_ACTION.md", "THESIS_007_DOMAIN_AGNOSTIC_PURITY.md"],
+    "least-action": ["THESIS_001_LEAST_ACTION.md"],
+    "spec": ["THESIS_002_INVERSE_SPEC.md", "THESIS_005_GOAL_TO_SPEC.md"],
+    "boundary": ["THESIS_003_DEWDROP_BOUNDARY.md"],
+    "sandbox": ["THESIS_003_DEWDROP_BOUNDARY.md"],
+    "isolation": ["THESIS_003_DEWDROP_BOUNDARY.md", "THESIS_007_DOMAIN_AGNOSTIC_PURITY.md"],
+    "noise": ["THESIS_006_SEMANTIC_NOISE_REJECTION.md"],
+    "audit": ["THESIS_007_CRUCIBLE_HARDENING.md"],
+    "verify": ["THESIS_007_CRUCIBLE_HARDENING.md"],
+    "purity": ["THESIS_007_DOMAIN_AGNOSTIC_PURITY.md"],
+    "domain-agnostic": ["THESIS_007_DOMAIN_AGNOSTIC_PURITY.md"],
+    "enterprise": ["THESIS_008_ENTERPRISE_BOOTSTRAP.md"],
+    "teleological": ["THESIS_009_TELEOLOGICAL_VALIDATION.md"],
+    "intent": ["THESIS_010_TACIT_INTENT_DECONSTRUCTION.md"],
+    "drift": ["THESIS_011_DRIFT_GUARD_CIRCUIT_BREAKER.md"],
+    "circuit": ["THESIS_011_DRIFT_GUARD_CIRCUIT_BREAKER.md"],
+    "living": ["THESIS_012_LIVING_SPEC_DIRECTOR.md"],
+}
+
+def resolve_teleological_invariants(goal_description: str, available_theses: list):
+    """
+    Parses operational verbs and structural constraints from goal description
+    and maps them to foundational theses without relying on domain-specific keywords.
+    """
+    goal_lower = goal_description.lower()
+    matched_theses = set()
+    detected_constraints = []
+
+    for verb_or_constraint, linked_theses in TELEOLOGICAL_INVARIANT_MAP.items():
+        if re.search(r'\b' + re.escape(verb_or_constraint) + r'\b', goal_lower) or verb_or_constraint in goal_lower:
+            detected_constraints.append(verb_or_constraint)
+            for t in linked_theses:
+                if t in available_theses:
+                    matched_theses.add(t)
+
+    return sorted(list(matched_theses)), detected_constraints
+
 def compile_task_spec(goal_description, output_path="TASK_SPEC.md", theses_dir="theses"):
     if not goal_description or not goal_description.strip():
         print("[FAIL] Empty goal specification is prohibited.", file=sys.stderr)
@@ -48,9 +87,8 @@ def compile_task_spec(goal_description, output_path="TASK_SPEC.md", theses_dir="
         print("[FAIL] Orphan execution: No foundational theses found in repository.", file=sys.stderr)
         sys.exit(1)
     
-    # Check if goal triggers negative filtering (extraction / timeline / parse / uyap)
-    trigger_keywords = ["extract", "timeline", "parse", "uyap", "analysis"]
-    needs_negative_filter = any(kw in goal_description.lower() for kw in trigger_keywords)
+    # Teleological & structural contract resolution
+    matched_theses, detected_constraints = resolve_teleological_invariants(goal_description, theses)
 
     spec_content = f"""# TASK SPEC: COMPILED FROM GOAL
 > **Objective:** {goal_description.strip()}  
@@ -61,18 +99,18 @@ def compile_task_spec(goal_description, output_path="TASK_SPEC.md", theses_dir="
 
 ## 1. RESOLVED INVARIANTS & DEPENDENCIES
 """
+    if matched_theses:
+        for t in matched_theses:
+            spec_content += f"* Structural constraint linked: `theses/{t}`\n"
     for t in theses:
-        spec_content += f"* Automated reference linked: `theses/{t}`\n"
+        if t not in matched_theses:
+            spec_content += f"* Automated reference linked: `theses/{t}`\n"
 
     spec_content += f"""
 ## 2. NEGATIVE INVARIANTS & BOUNDARY CONDITIONS
-"""
-    if needs_negative_filter:
-        spec_content += "* **INVARIANT (RFC-005):** Must isolate identity metadata (birthdates, party IDs) from operational timeline events. Must provide periodic progress stdout.\n"
-    else:
-        spec_content += "* Standard zero-friction invariant bounds apply.\n"
+* **INVARIANT:** Strict isolation between static metadata and state transitions. Zero external dependencies.
+* Standard zero-friction invariant bounds apply.
 
-    spec_content += f"""
 ## 3. DEFINITION OF DONE (DoD)
 * Zero-dependency invariant verification via `verify.py`.
 * UTF-8 stdout buffering and periodic heartbeat telemetry implemented.
@@ -82,7 +120,8 @@ def compile_task_spec(goal_description, output_path="TASK_SPEC.md", theses_dir="
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(spec_content)
     
-    print(f"[PASS] Successfully compiled {output_path} referencing {len(theses)} foundational theses (Negative Filter: {needs_negative_filter}).")
+    constraint_info = f"Teleological Constraints: {', '.join(detected_constraints)}" if detected_constraints else "Standard Teleological Bounds"
+    print(f"[PASS] Successfully compiled {output_path} referencing {len(theses)} foundational theses ({constraint_info}).")
 
 def init_enterprise(target_dir="."):
     """
