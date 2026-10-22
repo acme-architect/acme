@@ -1,0 +1,35 @@
+{
+  "spec_id": "SPEC_20261022_141055",
+  "project_name": "retro_tetris",
+  "intent_data": {
+    "verdict": "ACCEPT",
+    "circuit_breaker_enforced": false,
+    "raw_intent": "Sıfır bağımlılıkla çalışan, saf Python terminal Tetris oyunu. Standart 10x20 ızgara, 7 tetromino, çarpışma algılama, satır patlatma ve hızlanma mekaniği.",
+    "clean_intent": "Sıfır bağımlılıkla çalışan, saf Python terminal Tetris oyunu. Standart 10x20 ızgara, 7 tetromino, çarpışma algılama, satır patlatma ve hızlanma mekaniği.",
+    "max_cycles": 10
+  },
+  "tasks": [
+    {
+      "id": "TASK-01",
+      "name": "Core Invariant & Domain Logic",
+      "tier": "CORE_MVP",
+      "status": "PASS",
+      "evidence": "Pure Python Tetris Core Engine Implemented"
+    },
+    {
+      "id": "TASK-02",
+      "name": "Zero-Dependency Verification Harness",
+      "tier": "CORE_MVP",
+      "status": "PASS",
+      "evidence": "tests/test_tetris.py passed with 3/3 OK"
+    },
+    {
+      "id": "TASK-03",
+      "name": "Composable Adapter / CLI Interface",
+      "tier": "PARITY_SHIELD",
+      "status": "PASS",
+      "evidence": "CLI Rendering & Simulation Validated"
+    }
+  ],
+  "updated_at": "2026-10-22T14:12:00.343998"
+}
