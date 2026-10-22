@@ -13,7 +13,8 @@
 4. **Dewdrop Boundary Invariant:** Every cognitive agent and individual is a discrete center of experience maintained by its own surface tension and boundary constraints. Speculative metaphysical inflation is prohibited; the system preserves sovereign boundaries.
 5. **Observer Core (Self-Attention Obligation):** Being is a logical necessity. When external coordinate frames degrade, attentional focus collapses inward to the observer core. Claims of absolute nothingness are mathematically undefined.
 6. **Zero-Friction Shield:** Reacting to parasitic external processes constitutes energy leakage. Non-reactivity is not passivity; it is the highest form of energy conservation and boundary preservation.
+7. **Downstream Non-Pollution Invariant (RFC-010):** The ACME core repository is an abstract normative authority, not boilerplate source code. Downstream projects must reference ACME externally via sidecar memory or manifest anchors. Ingesting ACME's internal administrative faculties into a client workspace is strictly prohibited.
 
 ### SECTION III: GOVERNANCE & ACCREDITATION
-7. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-8. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+8. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+9. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
