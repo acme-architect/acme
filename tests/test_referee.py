@@ -121,5 +121,22 @@ class TestRefereeEngine(unittest.TestCase):
         self.assertEqual(data["accreditation_certificate"]["status"], "ACCREDITED")
         self.assertEqual(data["accreditation_certificate"]["biological_root_of_trust"]["anchor_id"], "anchor-001")
 
+    def test_validate_branch_name(self):
+        """verify.validate_branch_name must accept main, student/node-*, and sprints/sprint-*."""
+        # Valid branches
+        self.assertTrue(verify.validate_branch_name("main"))
+        self.assertTrue(verify.validate_branch_name("HEAD"))
+        self.assertTrue(verify.validate_branch_name("student/node-001/thesis-least-action"))
+        self.assertTrue(verify.validate_branch_name("student/node-008/thesis-self-hosting-evolution"))
+        self.assertTrue(verify.validate_branch_name("sprints/sprint-1.6/governance-init"))
+        self.assertTrue(verify.validate_branch_name("sprints/sprint-2/core-engine"))
+
+        # Invalid branches
+        self.assertFalse(verify.validate_branch_name("feat/something"))
+        self.assertFalse(verify.validate_branch_name("random-branch"))
+        self.assertFalse(verify.validate_branch_name("student/invalid"))
+        self.assertFalse(verify.validate_branch_name("sprints/invalid"))
+
 if __name__ == "__main__":
     unittest.main()
+

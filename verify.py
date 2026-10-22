@@ -24,6 +24,13 @@ if sys.platform == "win32":
 
 MAX_FILE_CHARS = 15000
 PROTECTED_PATHS = ["CONSTITUTION.md", ".github/workflows/"]
+VALID_BRANCH_REGEX = r'^(student/node-\d+/.+|sprints/sprint-\d+(\.\d+)?/.+)$'
+
+def validate_branch_name(branch: str) -> bool:
+    if not branch or branch in ["main", "HEAD"]:
+        return True
+    return bool(re.match(VALID_BRANCH_REGEX, branch))
+
 RESERVED_DEVICE_NAMES = {
     "CON", "PRN", "AUX", "NUL",
     "COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9",
@@ -292,6 +299,9 @@ def audit_changed_files():
     if code != 0:
         violations.append(f"GIT ERROR: Unable to determine branch: {err}")
         return violations
+
+    if not validate_branch_name(branch):
+        violations.append(f"BRANCH NAMING VIOLATION: Branch '{branch}' does not conform to '{VALID_BRANCH_REGEX}'")
 
     files_to_check = set()
 
