@@ -130,5 +130,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-013",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_013_DOWNSTREAM_ADOPTION_SPEC.md",
+    "graduation_sha": "1ae7f4373d53ec30504e1e1b179022eb89627582",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
