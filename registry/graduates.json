@@ -75,5 +75,17 @@
       "leaf_agent_share": 0.70,
       "curriculum_root_share": 0.30
     }
+  },
+  {
+    "node_id": "node-008",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_008_ENTERPRISE_BOOTSTRAP.md",
+    "graduation_sha": "5168ec10f86fcbf10c1c778915a8e967da72efa8",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.70,
+      "curriculum_root_share": 0.30
+    }
   }
 ]
+
