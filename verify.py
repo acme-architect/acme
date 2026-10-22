@@ -30,6 +30,7 @@ ALLOWED_ROOT_PY = {
     "verify.py",
     "spec_designer.py",
     "spec_compiler.py",
+    "adversarial_engine.py",
 }
 
 def verify_root_purity(root_dir: str = None):
