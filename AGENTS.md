@@ -7,10 +7,8 @@ When an operator requests to develop a project "using ACME", "compliant with ACM
 3. **Workspace Sanitization:** Keep the user's project workspace 100% free of ACME internal administrative structures (`curriculum/`, `theses/`, `registry/`).
 4. **Downstream Manifest:** Identify compliant projects exclusively via the presence of a root `.acme` manifest file.
 
-## 2. Autonomous Friction Dispatch Protocol
-When a downstream worker agent encounters an architectural limit, invariant failure, or ambiguous specification:
-1. **DO NOT** halt execution to ask the human operator for manual resolution.
-2. **ISOLATE** the friction into an abstract invariant rule (stripping all local project data).
-3. **CHECKOUT** a student branch in ACME (`student/node-<id>/thesis-<topic>`).
-4. **SYNTHESIZE** a candidate `theses/THESIS_<id>_<TOPIC>.md` following RFC standards.
-5. **SUBMIT** the candidate branch to the Review Board (Gemini) for maturation and accreditation.
+## 2. Downstream Friction & RFC Reporting Protocol
+When working inside a downstream client workspace:
+1. **DO NOT** attempt to author a full ACME thesis from the client project.
+2. If architectural friction or missing constraints are detected, emit an RFC Request conforming to `templates/RFC_TEMPLATE.md`.
+3. Submit the request to the ACME Review Board for triage, aggregation, and formal thesis maturation.
