@@ -119,5 +119,16 @@
       "leaf_agent_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-012",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_012_LIVING_SPEC_DIRECTOR.md",
+    "graduation_sha": "eed0e9f42aecaa7ec815f7b85a282ac94cc393e2",
+    "status": "ACCREDITED",
+    "attribution": {
+      "leaf_agent_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
