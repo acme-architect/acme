@@ -162,5 +162,35 @@ class TestCrucibleDefenses(unittest.TestCase):
             spec_compiler.compile_task_spec("   ")
         self.assertEqual(cm.exception.code, 1)
 
+    def test_spec_compiler_init_enterprise(self):
+        """spec_compiler.init_enterprise must scaffold .acme/ config and hooks."""
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            # Create a mock .git/hooks directory
+            mock_git_hooks = os.path.join(tmp_dir, ".git", "hooks")
+            os.makedirs(mock_git_hooks, exist_ok=True)
+
+            res = spec_compiler.init_enterprise(tmp_dir)
+            self.assertTrue(res)
+
+            # Validate .acme/config.json
+            config_file = os.path.join(tmp_dir, ".acme", "config.json")
+            self.assertTrue(os.path.exists(config_file))
+            with open(config_file, "r", encoding="utf-8") as f:
+                cfg = json.load(f)
+            self.assertEqual(cfg.get("protocol"), "RFC-007")
+            self.assertEqual(cfg.get("version"), "1.6.0")
+            self.assertTrue(cfg.get("autopoietic_feedback_loop", {}).get("enabled"))
+
+            # Validate hooks in .acme/hooks
+            acme_pre_commit = os.path.join(tmp_dir, ".acme", "hooks", "pre-commit")
+            self.assertTrue(os.path.exists(acme_pre_commit))
+
+            # Validate hooks installed in .git/hooks
+            git_pre_commit = os.path.join(mock_git_hooks, "pre-commit")
+            git_pre_push = os.path.join(mock_git_hooks, "pre-push")
+            self.assertTrue(os.path.exists(git_pre_commit))
+            self.assertTrue(os.path.exists(git_pre_push))
+
 if __name__ == "__main__":
     unittest.main()
+
