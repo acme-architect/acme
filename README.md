@@ -49,14 +49,31 @@ A downstream project establishes constitutional compliance exclusively through a
 }
 ```
 
+##### 📋 AI Agent Prompt Snippet (Copy & Paste to your Agent)
+To instruct any AI assistant (AntiGravity, Cursor, Claude, Windsurf) to anchor an active workspace, paste this directive:
+
+```text
+Adopt ACME as Lex Superior for this workspace:
+1. Create a root '.acme' manifest file referencing https://github.com/acme-foundation/acme.git (version: v2.2.0, mode: normative_reference).
+2. DO NOT clone, copy, or unpack ACME internal governance directories (theses/, curriculum/, registry/, CONSTITUTION.md) into this workspace.
+3. Treat ACME invariants (Principle of Least Action, Dewdrop Boundary) as external normative sidecar constraints.
+4. If architectural friction or specification ambiguity is detected, emit an RFC Request conforming to ACME templates/RFC_TEMPLATE.md instead of applying local workarounds.
+```
+
+##### ⚡ Quick CLI Setup (PowerShell One-Liner)
+```powershell
+$m = '{"acme_standard":"https://github.com/acme-foundation/acme.git","version":"v2.2.0","mode":"normative_reference"}'
+[System.IO.File]::WriteAllText((Join-Path (Get-Location) ".acme"), $m, [System.Text.UTF8Encoding]::new($false))
+```
+
 #### 4.3. Sidecar Memory Consumption
 Autonomous developer agents (AntiGravity, Claude, Cursor) consume ACME specifications as external, read-only sidecar memory or system prompts, verifying invariants without altering client workspace boundaries.
 
-#### 4.4. Autonomous Friction Backpropagation (RFC-014)
+#### 4.4. Downstream Friction & RFC Dispatch (RFC-014)
 When a downstream agent encounters an architectural deadlock, invariant breach, or unhandled friction:
 1. **Zero Ad-Hoc Drift:** Do not apply silent local workarounds that mask systemic ambiguity.
 2. **Decontamination:** Strip all proprietary schemas, local datasets, and domain-specific code.
-3. **Dispatch Upstream Candidate:** Check out an upstream student branch in ACME (`student/node-<id>/thesis-<topic>`) and submit an RFC-compliant thesis candidate to the ACME Review Board for maturation and accreditation.
+3. **Emit RFC Request:** Do not author a full ACME thesis from the client project; emit a lightweight RFC request following `templates/RFC_TEMPLATE.md` and submit it to the ACME Review Board for central triage and formal thesis maturation.
 
 ---
 
