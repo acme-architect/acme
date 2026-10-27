@@ -218,5 +218,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-021",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_021_BIOLOGICAL_SOFTMAX_DOF_REDUCTION.md",
+    "graduation_sha": "153af2298a060a1e8f6dddbb4a7f744e76ea799a",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
