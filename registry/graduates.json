@@ -240,5 +240,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-023",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_023_ADVERSARIAL_TWIN_CRUCIBLE.md",
+    "graduation_sha": "c997af67971a5f7e7a32fa73ec022001721806b8",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

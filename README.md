@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.10.0 | Standard-First Resolver & Zero-Reinvention Engine*
+> *Release v2.11.0 | Adversarial Twin Specification & Crucible Gate*
 
 ---
 
@@ -44,7 +44,7 @@ A downstream project establishes constitutional compliance exclusively through a
 ```json
 {
   "acme_standard": "https://github.com/acme-foundation/acme.git",
-  "version": "v2.10.0",
+  "version": "v2.11.0",
   "mode": "normative_reference"
 }
 ```
@@ -54,7 +54,7 @@ To instruct any AI assistant (AntiGravity, Cursor, Claude, Windsurf) to anchor a
 
 ```text
 Adopt ACME as Lex Superior for this workspace:
-1. Create a root '.acme' manifest file referencing https://github.com/acme-foundation/acme.git (version: v2.10.0, mode: normative_reference).
+1. Create a root '.acme' manifest file referencing https://github.com/acme-foundation/acme.git (version: v2.11.0, mode: normative_reference).
 2. DO NOT clone, copy, or unpack ACME internal governance directories (theses/, curriculum/, registry/, CONSTITUTION.md) into this workspace.
 3. Treat ACME invariants (Principle of Least Action, Dewdrop Boundary) as external normative sidecar constraints.
 4. If architectural friction or specification ambiguity is detected, emit an RFC Request conforming to ACME templates/RFC_TEMPLATE.md instead of applying local workarounds.
@@ -62,7 +62,7 @@ Adopt ACME as Lex Superior for this workspace:
 
 ##### ⚡ Quick CLI Setup (PowerShell One-Liner)
 ```powershell
-$m = '{"acme_standard":"https://github.com/acme-foundation/acme.git","version":"v2.10.0","mode":"normative_reference"}'
+$m = '{"acme_standard":"https://github.com/acme-foundation/acme.git","version":"v2.11.0","mode":"normative_reference"}'
 [System.IO.File]::WriteAllText((Join-Path (Get-Location) ".acme"), $m, [System.Text.UTF8Encoding]::new($false))
 ```
 
