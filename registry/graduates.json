@@ -251,5 +251,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-024",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_024_TREE_OF_THOUGHTS_PRM.md",
+    "graduation_sha": "7cdfbcc5ca6a2f09c374a21f6bc43c80a0305282",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
