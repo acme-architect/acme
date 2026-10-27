@@ -229,5 +229,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-022",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_022_STANDARD_FIRST_RESOLVER.md",
+    "graduation_sha": "2c5551f004c4744c42b39393b9102eb5b458da8d",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
