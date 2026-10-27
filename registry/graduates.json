@@ -262,5 +262,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-025",
+    "faculty": "faculty-law",
+    "thesis_file": "theses/THESIS_025_CHRONOLOGICAL_CASE_CORPUS.md",
+    "graduation_sha": "3e10451399b1796dcdc11310038dcbec4880875c",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

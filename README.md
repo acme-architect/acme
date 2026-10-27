@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.12.0 | Tree of Thoughts & Process Reward Model Engine*
+> *Release v2.13.0 | Chronological Case Corpus & UDF Disentanglement Engine*
 
 ---
 
