@@ -185,5 +185,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-018",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_018_TACIT_TO_METRIC_GROUNDING.md",
+    "graduation_sha": "8d4d96efd06bf73a50a11ea9df389295472b32cc",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
