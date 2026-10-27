@@ -196,5 +196,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-019",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_019_METABOLIC_TRIAGE_NOISE_GATE.md",
+    "graduation_sha": "4a0865af65dd0ebfe9dc1eda8facee1b292966f8",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
