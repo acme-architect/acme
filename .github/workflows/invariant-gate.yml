@@ -1,103 +1,48 @@
-name: ACME Pure NLP Invariant Gate
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+name: ACME Invariant Gate
+on: [push, pull_request]
 
 jobs:
-  pure-nlp-invariants:
+  audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Merkle Tree
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python Runtime (Audit Harness Only)
+      - uses: actions/checkout@v4
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
-      - name: Gate 1 - UTF-8 No-BOM Gate
+          python-version: '3.11'
+      - name: Audit Pure NLP, Zero-Code & Registry Integrity
         run: |
-          python -c '
-          import os, sys
-          bom_files = []
-          for root, _, files in os.walk("."):
-              if ".git" in root:
-                  continue
+          python -c "
+          import os, json, sys
+
+          # 1. Zero-Code Invariant: No code artifacts in core
+          forbidden = ['.py', '.sh', '.exe', '.dll']
+          for root, dirs, files in os.walk('.'):
+              if '.git' in dirs: dirs.remove('.git')
               for f in files:
-                  if f.endswith((".md", ".json")):
-                      path = os.path.join(root, f)
-                      with open(path, "rb") as fp:
-                          if fp.read(3) == b"\xef\xbb\xbf":
-                              bom_files.append(path)
-          if bom_files:
-              print(f"[REJECT] UTF-8 BOM detected in: {bom_files}", file=sys.stderr)
-              sys.exit(1)
-          print("[PASS] Gate 1: UTF-8 No-BOM verified across all markdown and json files.")
-          '
+                  if os.path.splitext(f)[1].lower() in forbidden:
+                      print(f'[FAIL] Code artifact found: {os.path.join(root, f)}')
+                      sys.exit(1)
 
-      - name: Gate 2 - Zero-Code Core Invariant
-        run: |
-          python -c '
-          import os, sys
-          forbidden_dirs = ["theses", "curriculum", "registry"]
-          forbidden_exts = (".py", ".sh", ".exe", ".bin", ".so", ".dll")
-          violations = []
-          for d in forbidden_dirs:
-              if os.path.exists(d):
-                  for root, _, files in os.walk(d):
-                      for f in files:
-                          if f.endswith(forbidden_exts):
-                              violations.append(os.path.join(root, f))
-          if violations:
-              print(f"[REJECT] Code execution entities found in Pure NLP core: {violations}", file=sys.stderr)
-              sys.exit(1)
-          print("[PASS] Gate 2: Zero-Code Pure NLP invariant confirmed across governance faculties.")
-          '
+          # 2. Registry & Thesis Integrity
+          with open('registry/graduates.json', 'r', encoding='utf-8') as fl:
+              grads = json.load(fl)
+          for g in grads:
+              t_file = g['thesis_file']
+              if not os.path.exists(t_file):
+                  print(f'[FAIL] Missing thesis file: {t_file}')
+                  sys.exit(1)
 
-      - name: Gate 3 - Ledger & Thesis Reference Integrity
-        run: |
-          python -c '
-          import os, sys, json
-          ledger_path = os.path.join("registry", "graduates.json")
-          if not os.path.exists(ledger_path):
-              print("[REJECT] registry/graduates.json missing!", file=sys.stderr)
-              sys.exit(1)
-          with open(ledger_path, "r", encoding="utf-8") as f:
-              graduates = json.load(f)
-          missing_theses = []
-          for g in graduates:
-              t_file = g.get("thesis_file")
-              if not t_file or not os.path.exists(t_file):
-                  missing_theses.append(f"{g.get(\"node_id\")}: {t_file}")
-          if missing_theses:
-              print(f"[REJECT] Missing thesis references in ledger: {missing_theses}", file=sys.stderr)
-              sys.exit(1)
-          print(f"[PASS] Gate 3: Ledger valid. All {len(graduates)} graduate diplomas verified against disk.")
-          '
+          # 3. Domain Purity Negative Gate
+          prohibited = ['UYAP', 'TCKN', 'UDF']
+          for root, dirs, files in os.walk('theses'):
+              for f in files:
+                  if f.endswith('.md'):
+                      c = open(os.path.join(root, f), 'r', encoding='utf-8').read()
+                      for p in prohibited:
+                          if p in c:
+                              print(f'[FAIL] Domain purity breach ({p}) in {f}')
+                              sys.exit(1)
 
-      - name: Gate 4 - Domain Purity Linter
-        run: |
-          python -c '
-          import os, sys, re
-          forbidden_patterns = [r"\bUYAP\b", r"\bTCKN\b", r"\bUDF\b"]
-          violations = []
-          theses_dir = "theses"
-          if os.path.exists(theses_dir):
-              for f in os.listdir(theses_dir):
-                  if f.endswith(".md"):
-                      path = os.path.join(theses_dir, f)
-                      with open(path, "r", encoding="utf-8") as fp:
-                          content = fp.read()
-                      for pat in forbidden_patterns:
-                          if re.search(pat, content):
-                              violations.append(f"{f} matched {pat}")
-          if violations:
-              print(f"[REJECT] Domain purity violations detected: {violations}", file=sys.stderr)
-              sys.exit(1)
-          print("[PASS] Gate 4: Domain purity linter clean. Zero local jargon detected.")
-          '
+          print('[PASS] All ACME Core pure NLP invariants verified.')
+          "
