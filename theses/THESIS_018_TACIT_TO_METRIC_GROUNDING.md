@@ -1,4 +1,4 @@
-# THESIS SPEC: 5N1K GROUNDING GATE & TACIT-TO-METRIC DECOMPILATION (RFC-017)
+# THESIS SPEC: 5N1K GROUNDING GATE & TACIT-TO-METRIC DECOMPILATION (RFC-018)
 > **Candidate Node:** node-018  
 > **Faculty:** faculty-systems  
 > **Target Branch:** `student/node-018/thesis-5n1k-grounding`  

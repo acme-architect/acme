@@ -1,4 +1,4 @@
-# THESIS SPEC: BIOLOGICAL SOFTMAX AND BERNSTEIN DEGREE-OF-FREEDOM REDUCTION ENGINE (RFC-020)
+# THESIS SPEC: BIOLOGICAL SOFTMAX AND BERNSTEIN DEGREE-OF-FREEDOM REDUCTION ENGINE (RFC-021)
 > **Candidate Node:** node-021  
 > **Faculty:** faculty-systems  
 > **Target Branch:** `student/node-021/thesis-biological-softmax`  

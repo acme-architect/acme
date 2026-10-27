@@ -1,4 +1,4 @@
-# THESIS SPEC: STANDARD-FIRST RESOLVER AND ZERO-REINVENTION REVERSE ENGINEERING ENGINE (RFC-021)
+# THESIS SPEC: STANDARD-FIRST RESOLVER AND ZERO-REINVENTION REVERSE ENGINEERING ENGINE (RFC-022)
 > **Candidate Node:** node-022  
 > **Faculty:** faculty-systems  
 > **Target Branch:** `student/node-022/thesis-standard-first-resolver`  

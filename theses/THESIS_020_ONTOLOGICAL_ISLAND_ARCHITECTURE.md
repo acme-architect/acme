@@ -1,4 +1,4 @@
-# THESIS SPEC: ONTOLOGICAL ISLAND AND CONTEXT HEADER ARCHITECTURE (RFC-019)
+# THESIS SPEC: ONTOLOGICAL ISLAND AND CONTEXT HEADER ARCHITECTURE (RFC-020)
 > **Candidate Node:** node-020  
 > **Faculty:** faculty-systems  
 > **Target Branch:** `student/node-020/thesis-ontological-island`  

@@ -1,4 +1,4 @@
-# THESIS SPEC: CHRONOLOGICAL CASE CORPUS AND UDF DISENTANGLEMENT ENGINE (RFC-024)
+# THESIS SPEC: CHRONOLOGICAL CASE CORPUS AND STRUCTURED FORENSIC CONTAINER DISENTANGLEMENT ENGINE (RFC-024)
 > **Candidate Node:** node-025  
 > **Faculty:** faculty-law  
 > **Target Branch:** `student/node-025/thesis-chronological-case-corpus`  
@@ -9,7 +9,7 @@
 
 ## 1. INVARIANT TARGET & TELEOLOGICAL INTENT
 * **Constitutional Reference:** CONSTITUTION.md Section I, Article 1 (Principle of Least Action), Section II, Article 4 (Dewdrop Boundary Invariant), and Section III, Article 8 (Minimal Evidentiary Path / Procedural Aikido).
-* **Problem Formulation (The Chronological Hallucination & Identity-Event Contamination Gap):** Unstructured legal proceedings, judicial XML filings (UDF/UYAP), and witness testimonies routinely intertwine static personal metadata (national ID numbers, birthdates, barcode stamps, court docket numbers) with factual dispute timelines. Furthermore, the absence of strict temporal causal ordering and automated estoppel auditing (*Venire Contra Factum Proprium*) allows mutual contradictions between subjective claims and verified material records to go undetected, inflating litigation entropy.
+* **Problem Formulation (The Chronological Hallucination & Identity-Event Contamination Gap):** Unstructured legal proceedings, structured forensic XML containers, and witness testimonies routinely intertwine static personal metadata (National Identification Metrics / static personal identity anchors, birthdates, barcode stamps, procedural docket sequence coordinates) with factual dispute timelines. Furthermore, the absence of strict temporal causal ordering and automated estoppel auditing (*Venire Contra Factum Proprium*) allows mutual contradictions between subjective claims and verified material records to go undetected, inflating litigation entropy.
 * **Negative Boundary Condition (Via Negativa):** Blending personal identity metadata into operational event sequences, asserting causal relations without monotonic chronological ordering ($t_0 \le t_1 \le t_2$), failing to quarantine unanchored events (`UNRESOLVED_TEMPORAL_ANCHOR`), or asserting subjective contradiction claims without documentary parity is strictly prohibited (REJECT).
 
 ---
@@ -19,7 +19,7 @@
 | Boundary Layer | Permitted DoF | Constraint Type | Cognitive Referee Rule |
 | :--- | :--- | :--- | :--- |
 | **Monotonic Temporal Ordering** | **$\text{DoF} = 0$** | *Lex Invariant* | Extracted dispute events must satisfy strict chronological progression ($t_i \le t_{i+1}$). Ambiguous timestamps must be quarantined immediately. |
-| **Identity Metadata Quarantine** | **$\text{DoF} = 0$** | *Absolute Invariant* | Personal identity data (TCKN, birthdates, barcodes, docket IDs) must be quarantined from factual event sequences (RFC-005). |
+| **Identity Metadata Quarantine** | **$\text{DoF} = 0$** | *Absolute Invariant* | Personal identity data (National Identification Metrics, static personal identity anchors, birthdates, barcodes, procedural docket coordinates) must be quarantined from factual event sequences (RFC-005). |
 | **Estoppel & Contradiction Parity** | **$\text{DoF} = 0$** | *State Invariant* | Contradictions between party assertions and official records evaluate via a binary matrix; subjective editorializing is barred. |
 | **Extraction Window & Lexical Aliasing** | **$\text{DoF} \ge 1$** | *Adaptive Norm* | Linguistic date pattern regexes, normalization schemas, and jurisdictional terminology adapt dynamically across judicial venues. |
 
@@ -29,13 +29,13 @@
 * **INVARIANT 1 (Strict Temporal Causal Monotonicity):** Operational event sequences must adhere to strict temporal monotonicity. Unanchored or conflicting dates must be assigned `UNRESOLVED_TEMPORAL_ANCHOR` and isolated from the active causal trajectory.
 * **INVARIANT 2 (Identity & Metadata Quarantine Gate):** Personal identity attributes, civil registry numbers, and procedural docket headers must be quarantined from the factual event stream. Merging identity metadata into occurrence chronology constitutes an invariant breach.
 * **INVARIANT 3 (Binary Estoppel & Contradiction Verification):** The contradiction matrix must assert estoppel (*Venire Contra Factum Proprium*) between subjective claims and verified material records (e.g., bank ledgers, corporate registries). Speculative editorializing without documentary parity is forbidden.
-* **INVARIANT 4 (Cryptographic Corpus Ledger Proof):** The extracted clean timeline, contradiction matrix, and sanitized UDF document hash (SHA-256) must be anchored to the case audit ledger prior to judicial brief compilation.
+* **INVARIANT 4 (Cryptographic Corpus Ledger Proof):** The extracted clean timeline, contradiction matrix, and sanitized forensic container document hash (SHA-256) must be anchored to the case audit ledger prior to judicial brief compilation.
 
 ---
 
 ## 4. ADAPTIVE NORMS & HEURISTICS (NORM: DoF $\ge$ 1)
 * **NORM 1 (Jurisdictional Date Normalization):** Support for localized date formats (DD.MM.YYYY, ISO 8601, textual month strings) adapts dynamically via configurable parsing profiles.
-* **NORM 2 (XML Styling Strip Depth):** Stripping depth for procedural styles and font formatting nodes adapts to UDF/UYAP schema revisions without discarding substantive text bodies.
+* **NORM 2 (XML Styling Strip Depth):** Stripping depth for procedural styles and font formatting nodes adapts to structured forensic XML container schema revisions without discarding substantive text bodies.
 * **NORM 3 (Diagnostic Discrepancy Telemetry):** Non-fatal timeline ambiguities may log structured advisory notes without terminating the primary extraction pipeline.
 
 ---

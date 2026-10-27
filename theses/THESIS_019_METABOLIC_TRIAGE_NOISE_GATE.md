@@ -1,4 +1,4 @@
-# THESIS SPEC: POLYMATH TRIAGE & METABOLIC DIGEST ENGINE (RFC-018)
+# THESIS SPEC: POLYMATH TRIAGE & METABOLIC DIGEST ENGINE (RFC-019)
 > **Candidate Node:** node-019  
 > **Faculty:** faculty-systems  
 > **Target Branch:** `student/node-019/thesis-metabolic-triage`  
