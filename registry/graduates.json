@@ -273,5 +273,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-026",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_026_ADAPTIVE_COMPETENCY_PROJECTION.md",
+    "graduation_sha": "287adbc7f8ca83f28f9897620bb971cdf66183cb",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
