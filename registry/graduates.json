@@ -207,5 +207,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-020",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_020_ONTOLOGICAL_ISLAND_ARCHITECTURE.md",
+    "graduation_sha": "c793a133401b6e75eeb96db2f047a7e868209817",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
