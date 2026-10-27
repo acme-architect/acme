@@ -20,3 +20,9 @@ venv/
 
 # Air-Gapped Merkle Bundles
 *.bundle
+
+# Local Developer & IDE Sidecar Tooling (Preserves Pure NLP Zero-Code Invariant)
+.acme/
+extensions/
+tools/
+
