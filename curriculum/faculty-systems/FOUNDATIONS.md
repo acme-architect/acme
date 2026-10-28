@@ -85,3 +85,6 @@
 
 ### SYS-107: Alice Orchestration & Symmetric Role Verification (Node-027 / RFC-024)
 - Formalizes transient role-hat instantiation and symmetric spec-to-DoD gatekeeping.
+
+### SYS-108: Distributed Runner Grid & Ephemeral Worker Protocol (Node-028 / RFC-025)
+- Defines bare-metal worker offloading, JMeter-style master-slave task chunking, and stateless telemetry ingestion.
