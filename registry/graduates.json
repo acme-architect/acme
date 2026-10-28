@@ -284,5 +284,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-027",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_027_ALICE_SYMMETRIC_ROLE_ORCHESTRATION.md",
+    "graduation_sha": "9cef6dff17300341a6b4b32bf47417e662f49a65",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
