@@ -317,5 +317,38 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-030",
+    "faculty": "faculty-philosophy",
+    "thesis_file": "theses/THESIS_030_FIBONACCI_SOCRATIC_DECOMPILER.md",
+    "graduation_sha": "93e6110c7c5a0bc16a55ae620fa83bdfe538a179",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-031",
+    "faculty": "faculty-law",
+    "thesis_file": "theses/THESIS_031_WORKSPACE_COHERENCE_GATE.md",
+    "graduation_sha": "93e6110c7c5a0bc16a55ae620fa83bdfe538a179",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-032",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_032_ENTERPRISE_SYSTEMS_EXTENSIONS.md",
+    "graduation_sha": "93e6110c7c5a0bc16a55ae620fa83bdfe538a179",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

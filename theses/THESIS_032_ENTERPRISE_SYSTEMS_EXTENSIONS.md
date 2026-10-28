@@ -20,3 +20,4 @@
 
 ## 3. PROOF OF COMPLIANCE & VERIFICATION
 * Verified against zero-code purity and canonical thesis schema.
+
