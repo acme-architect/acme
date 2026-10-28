@@ -295,5 +295,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-028",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_028_DISTRIBUTED_RUNNER_GRID_PROTOCOL.md",
+    "graduation_sha": "1329da7a760b4a6aba913726a07d01fe7fe3060f",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
