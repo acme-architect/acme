@@ -80,3 +80,8 @@
 ### 2. CORE TOPICS & RESEARCH VECTORS
 1. **Tree of Thoughts Search Horizons:** Strict mathematical bounds on search depth ($D_{\max}$) and beam width ($B_{\max}$) to avert combinatorial explosion.
 2. **Cryptographic Path Certification:** Merkle logging of validated reasoning paths and intermediate score certificates.
+
+---
+
+### SYS-107: Alice Orchestration & Symmetric Role Verification (Node-027 / RFC-024)
+- Formalizes transient role-hat instantiation and symmetric spec-to-DoD gatekeeping.
