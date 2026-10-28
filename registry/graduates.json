@@ -350,5 +350,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-033",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_033_AUTOPOIETIC_CADENCE_SEMVER.md",
+    "graduation_sha": "94f7cb992f2382d4d9bb932e25c67c78b95f8a21",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
