@@ -306,5 +306,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-029",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_029_DOWNSTREAM_QUARANTINE_AND_NORM_SYNC.md",
+    "graduation_sha": "7ccf39bb52f4d9ba58b3a9ebf601185988324f67",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
