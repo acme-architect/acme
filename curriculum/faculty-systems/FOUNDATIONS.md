@@ -88,3 +88,6 @@
 
 ### SYS-108: Distributed Runner Grid & Ephemeral Worker Protocol (Node-028 / RFC-025)
 - Defines bare-metal worker offloading, JMeter-style master-slave task chunking, and stateless telemetry ingestion.
+
+### SYS-109: Downstream Intake Quarantine & Norm Synchronization (Node-029 / RFC-026)
+- Establishes strict isolation between downstream workspaces and ACME core, formalizing scrubbed intake and read-only manifest updates.
