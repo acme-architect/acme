@@ -54,3 +54,9 @@
 ### 2. CORE TOPICS & RESEARCH VECTORS
 1. **Bernstein Degree-of-Freedom Freezing:** Mathematical reduction of multidimensional generative states into single execution trajectories.
 2. **Human Moral Sovereignty:** Preservation of human ethical primacy as the non-delegable root of cognitive trust.
+
+
+---
+
+### PHI-105: Fibonacci Socratic Tree Decompilation & Socratic Brake (Node-030 / RFC-027)
+- Deconstructs tacit adjectives via Fibonacci progression and enforces deterministic halt upon ungrounded ambiguity.

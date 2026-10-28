@@ -41,3 +41,9 @@
 ### 2. CORE TOPICS & RESEARCH VECTORS
 1. **Cross-Evidentiary Collision Detection:** Automated auditing comparing subjective claims against verified registries, payroll ledgers, and transaction records.
 2. **Estoppel Violation Classification:** Categorizing evidentiary clashes into direct conflicts, temporal impossibilities, and material omissions.
+
+
+---
+
+### LAW-104: Workspace Coherence Gates & Scope Drift Invariants (Node-031 / RFC-028)
+- Guarantees cross-specification non-contradiction and binary estoppel against unsealed scope expansion.
