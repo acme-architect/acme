@@ -91,3 +91,6 @@
 
 ### SYS-109: Downstream Intake Quarantine & Norm Synchronization (Node-029 / RFC-026)
 - Establishes strict isolation between downstream workspaces and ACME core, formalizing scrubbed intake and read-only manifest updates.
+
+### SYS-110: Enterprise Brownfield Inspector & Continuous Architecture (Node-032 / RFC-029)
+- Enforces ASan/LSan zero-leak compliance for legacy C/C++ ingestion and end-to-end Merkle architectural provenance.
