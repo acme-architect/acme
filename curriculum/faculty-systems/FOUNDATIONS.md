@@ -86,7 +86,7 @@
 ### SYS-107: Alice Orchestration & Symmetric Role Verification (Node-027 / RFC-024)
 - Formalizes transient role-hat instantiation and symmetric spec-to-DoD gatekeeping.
 
-### SYS-108: Distributed Runner Grid & Ephemeral Worker Protocol (Node-028 / RFC-025)
+### SYS-108: Distributed Runner Grid & Stateful Scar-Tissue Protocol (Node-028 / Node-029)
 - Defines bare-metal worker offloading, JMeter-style master-slave task chunking, and stateless telemetry ingestion.
 
 ### SYS-109: Downstream Intake Quarantine & Norm Synchronization (Node-029 / RFC-026)
@@ -102,3 +102,6 @@
 
 ### SYS-112: Holographic Coherence & Fractal Weakest-Link (Node-034 / RFC-031)
 - Formulates semantic drift as the core architectural bottleneck, enforcing scale invariance, cargo cult filtering, and deterministic out-of-band pruning.
+
+### SYS-113: Stateful Scar-Tissue Grounding & Pre-Mortem Dialectic Architecture (Node-029 / RFC-029)
+- Equips adversarial critics with cryptographically hashed episodic failure traces, preventing unanchored stateless prompt drift and enforcing pre-mortem rejection gates.

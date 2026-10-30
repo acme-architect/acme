@@ -372,5 +372,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-029",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_029_STATEFUL_SCAR_TISSUE_GROUNDING.md",
+    "graduation_sha": "aa7e9d695490ffc9654c1f148182d6697891f520",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
