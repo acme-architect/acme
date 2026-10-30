@@ -43,9 +43,17 @@ Downstream client projects (workspaces) adopt ACME as an external normative auth
 A downstream project establishes constitutional compliance exclusively through a root `.acme` JSON manifest:
 ```json
 {
-  "acme_standard": "https://github.com/acme-foundation/acme.git",
-  "version": "v2.20.0",
-  "mode": "normative_reference"
+  "repo": "https://github.com/acme-foundation/acme.git",
+  "version": "latest",
+  "mode": "normative_reference",
+  "feed": {
+    "persona": false,
+    "org": false
+  },
+  "profile": {
+    "persona": "default",
+    "org": "default"
+  }
 }
 ```
 
@@ -54,7 +62,7 @@ To instruct any AI assistant (AntiGravity, Cursor, Claude, Windsurf) to anchor a
 
 ```text
 Adopt ACME as Lex Superior for this workspace:
-1. Create a root '.acme' manifest file referencing https://github.com/acme-foundation/acme.git (version: v2.20.0, mode: normative_reference).
+1. Create a root '.acme' manifest file referencing https://github.com/acme-foundation/acme.git (version: latest, mode: normative_reference, feed: {persona: false, org: false}).
 2. DO NOT clone, copy, or unpack ACME internal governance directories (theses/, curriculum/, registry/, CONSTITUTION.md) into this workspace.
 3. Treat ACME invariants (Principle of Least Action, Dewdrop Boundary) as external normative sidecar constraints.
 4. If architectural friction or specification ambiguity is detected, emit an RFC Request conforming to ACME templates/RFC_TEMPLATE.md instead of applying local workarounds.
@@ -62,7 +70,7 @@ Adopt ACME as Lex Superior for this workspace:
 
 ##### ⚡ Quick CLI Setup (PowerShell One-Liner)
 ```powershell
-$m = '{"acme_standard":"https://github.com/acme-foundation/acme.git","version":"v2.20.0","mode":"normative_reference"}'
+$m = '{"repo":"https://github.com/acme-foundation/acme.git","version":"latest","mode":"normative_reference","feed":{"persona":false,"org":false},"profile":{"persona":"default","org":"default"}}'
 [System.IO.File]::WriteAllText((Join-Path (Get-Location) ".acme"), $m, [System.Text.UTF8Encoding]::new($false))
 ```
 

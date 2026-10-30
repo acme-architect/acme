@@ -60,30 +60,39 @@ Normative authority and context aggregation follow a strict three-tier unidirect
 
 ---
 
-## 4. CANONICAL DOWNSTREAM `.acme` MANIFEST SCHEMA
+## 4. CANONICAL DOWNSTREAM `.acme` MANIFEST SCHEMA (BEST PRACTICE)
 
-Downstream projects implementing ACME v2.21.0 bind their context exclusively through this root `.acme` manifest:
+Downstream projects implementing ACME bind their context exclusively through this root `.acme` manifest, adhering to single-depth hierarchical grouping ($\text{Depth} \le 1$):
 
 ```json
 {
-  "acme_standard": "https://github.com/acme-foundation/acme.git",
-  "version": "v2.21.0",
+  "repo": "https://github.com/acme-foundation/acme.git",
+  "version": "latest",
   "mode": "normative_reference",
-  "feed_persona": false,
-  "feed_org": false,
-  "persona_profile": "default",
-  "org_profile": "default"
+  "feed": {
+    "persona": false,
+    "org": false
+  },
+  "profile": {
+    "persona": "default",
+    "org": "default"
+  }
 }
 ```
 
-### Schema Field Definitions:
-* `acme_standard`: Cryptographic repository URI of the ACME normative core.
-* `version`: SemVer coordinate of the ratified standard.
-* `mode`: Operating posture (`normative_reference` for standard clients, `autonomous_workspace` for sovereign nodes).
-* `feed_persona`: Boolean flag. When `false`, zero developer habits, keystrokes, or persona heuristics are exfiltrated.
-* `feed_org`: Boolean flag. When `false`, zero proprietary internal schemas, client code, or organizational memory are shared.
-* `persona_profile`: Identifier for the isolated local digital twin profile.
-* `org_profile`: Identifier for the isolated enterprise compliance profile.
+### Schema Block Definitions:
+1. **Root Parameters (Technical Coordinates):**
+   * `repo`: Cryptographic repository URI of the ACME normative core.
+   * `version`: Release tag coordinate (e.g., `latest` or pinned `v2.20.2`).
+   * `mode`: Operating posture (`normative_reference` for standard clients, `autonomous_workspace` for sovereign nodes).
+2. **`feed` Block (Opt-In / Consent Shield - INV-OPTIN-STRICT):**
+   * `persona`: Boolean (default `false`). When `false`, zero developer habits, keystrokes, or persona heuristics are exfiltrated.
+   * `org`: Boolean (default `false`). When `false`, zero proprietary internal schemas, client code, or organizational memory are shared.
+3. **`profile` Block (Identity Namespace):**
+   * `persona`: Identifier for the isolated local digital twin profile (default `"default"`).
+   * `org`: Identifier for the isolated enterprise compliance profile (default `"default"`).
+
+*Backward Compatibility Note: Automated parsers normalize legacy flat keys (`acme_standard`, `feed_persona`, `feed_org`) into canonical grouped namespaces.*
 
 ---
 
