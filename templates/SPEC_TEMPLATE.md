@@ -12,17 +12,17 @@
 
 ---
 
-## 2. HEDEF KİTLE PROFİLİ & ERGONOMİ MATRİSİ (AUDIENCE & ERGONOMICS - INV-AUDIENCE-TARGET)
-* **Hedef Persona / Kullanıcı Seviyesi:** [Casual | Pro | Enterprise | Embedded | Autonomous Agent]
-* **Birincil Kullanım Bağlamı (Context of Use):** [Deployment environment, interaction cadence, session depth, zero-install requirements]
-* **Ergonomi Sınırları:** [Cihaz tipi (Desktop/Mobile/CLI/Embedded), Girdi arayüzü (Klavye/Touch/API/Terminal), Gecikme beklentisi (P95 latency bounds)]
+## 2. TARGET AUDIENCE PROFILE & ERGONOMIC MATRIX (INV-AUDIENCE-TARGET)
+* **Target Persona / User Tier:** [Casual | Pro | Enterprise | Embedded | Autonomous Agent]
+* **Primary Context of Use:** [Deployment environment, interaction cadence, session depth, zero-install requirements]
+* **Ergonomic Boundaries:** [Device tier (Desktop/Mobile/CLI/Embedded), Input interface (Keyboard/Touch/API/Terminal), Latency bounds (P95 latency bounds)]
 
 ---
 
-## 3. YEREL UYUM & FİKRİ MÜLKİYET (IP) SINIRLARI (COMPLIANCE & IP RADAR - INV-COMPLIANCE-RADAR)
-* **Fikri Mülkiyet (IP) & Marka Arındırma:** [Prohibition of proprietary trademarks, clean-room asset reproduction, zero copyrighted asset/audio leakage]
-* **Platform & Mevzuat Değişmezleri:** [Yerel veri egemenliği, tarayıcı autoplay/sandbox politikaları, lisans uyumluluğu (MIT/Apache2/GPL-free)]
-* **H-SWOT Pazar Gerçekliği & Hukuki Temizlik Kapısı:** [Fırsatlar (O) pazar rezonansına, Tehditler (T) fikri mülkiyet ve platform sürtünmesine bağlanmalıdır]
+## 3. LOCAL COMPLIANCE & INTELLECTUAL PROPERTY (IP) BOUNDARIES (INV-COMPLIANCE-RADAR)
+* **Intellectual Property (IP) & Trademark Sanitization:** [Prohibition of proprietary trademarks, clean-room asset reproduction, zero copyrighted asset/audio leakage]
+* **Platform & Regulatory Invariants:** [Local data sovereignty, browser autoplay/sandbox policies, license compliance (MIT/Apache2/GPL-free)]
+* **H-SWOT Market Reality & Legal Sanitization Gate:** [Opportunities (O) bound to market resonance, Threats (T) bound to IP friction and regulatory barriers]
 
 ---
 
