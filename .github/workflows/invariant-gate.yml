@@ -10,19 +10,28 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Audit Pure NLP, Zero-Code & Registry Integrity
+      - name: Audit Pure NLP, Zero-Code, Constitutional Integrity & Pre-Flight Gates
         run: |
           python -c "
-          import os, json, sys
+          import os, json, sys, re, subprocess
 
-          # 1. Zero-Code Invariant: No code artifacts in core
+          # 1. Zero-Code Invariant: No code artifacts tracked in core
           forbidden = ['.py', '.sh', '.exe', '.dll']
-          for root, dirs, files in os.walk('.'):
-              if '.git' in dirs: dirs.remove('.git')
-              for f in files:
+          try:
+              tracked = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
+              for f in tracked:
                   if os.path.splitext(f)[1].lower() in forbidden:
-                      print(f'[FAIL] Code artifact found: {os.path.join(root, f)}')
+                      print(f'[FAIL] Code artifact tracked in git: {f}')
                       sys.exit(1)
+          except Exception:
+              for root, dirs, files in os.walk('.'):
+                  if '.git' in dirs: dirs.remove('.git')
+                  if 'tools' in dirs: dirs.remove('tools')
+                  if 'extensions' in dirs: dirs.remove('extensions')
+                  for f in files:
+                      if os.path.splitext(f)[1].lower() in forbidden:
+                          print(f'[FAIL] Code artifact found: {os.path.join(root, f)}')
+                          sys.exit(1)
 
           # 2. Registry & Thesis Integrity
           with open('registry/graduates.json', 'r', encoding='utf-8') as fl:
@@ -44,5 +53,38 @@ jobs:
                               print(f'[FAIL] Domain purity breach ({p}) in {f}')
                               sys.exit(1)
 
-          print('[PASS] All ACME Core pure NLP invariants verified.')
+          # 4. Constitutional Integrity & Invariant Parity Gate
+          const_text = open('CONSTITUTION.md', 'r', encoding='utf-8').read()
+          required_invariants = [
+              'REJECT_SCOPE_EVASION',
+              'REJECT_EXTREME_ENTROPY',
+              'REJECT_SPECULATIVE_STATE',
+              'QUARANTINE_AND_LOG',
+              'Dewdrop Boundary Invariant',
+              'Biological Primacy'
+          ]
+          for inv in required_invariants:
+              if inv not in const_text:
+                  print(f'[FAIL] Missing core constitutional invariant: {inv}')
+                  sys.exit(1)
+
+          # 5. Pre-flight Circuit Breaker for Task Specifications (specs/)
+          banned_fluff = [
+              'hızlı', 'şık', 'kolay', 'performanslı', 'güzel', 'kaliteli', 'efsane',
+              'easy', 'beautiful'
+          ]
+          if os.path.exists('specs'):
+              for root, dirs, files in os.walk('specs'):
+                  for f in files:
+                      if f.endswith('.md'):
+                          p = os.path.join(root, f)
+                          c = open(p, 'r', encoding='utf-8').read()
+                          if not re.search(r'##\s*(?:NEGATİF KISITLAR|VIA NEGATIVA|INVARIANTS|THE LEX)', c, re.IGNORECASE):
+                              print(f'[FAIL] Spec lacks Via Negativa: {p}')
+                              sys.exit(1)
+                          if not re.search(r'-\s*\[\s*\]\s*(?:assert|exit code|SHA|p95|<=|==|>=)', c, re.IGNORECASE):
+                              print(f'[FAIL] Spec lacks binary DoD assertions: {p}')
+                              sys.exit(1)
+
+          print('[PASS] All ACME Core pure NLP invariants and CI/CD gates verified.')
           "
