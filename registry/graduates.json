@@ -361,5 +361,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-034",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_034_HOLOGRAPHIC_COHERENCE_FRACTAL_WEAKEST_LINK.md",
+    "graduation_sha": "c4b48aaa89f3a4983c9efed874557db0bfdc3a7e",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
