@@ -12,7 +12,21 @@
 
 ---
 
-## 2. TABLE OF DEGREES OF FREEDOM (DoF BUDGET)
+## 2. HEDEF KİTLE PROFİLİ & ERGONOMİ MATRİSİ (AUDIENCE & ERGONOMICS - INV-AUDIENCE-TARGET)
+* **Hedef Persona / Kullanıcı Seviyesi:** [Casual | Pro | Enterprise | Embedded | Autonomous Agent]
+* **Birincil Kullanım Bağlamı (Context of Use):** [Deployment environment, interaction cadence, session depth, zero-install requirements]
+* **Ergonomi Sınırları:** [Cihaz tipi (Desktop/Mobile/CLI/Embedded), Girdi arayüzü (Klavye/Touch/API/Terminal), Gecikme beklentisi (P95 latency bounds)]
+
+---
+
+## 3. YEREL UYUM & FİKRİ MÜLKİYET (IP) SINIRLARI (COMPLIANCE & IP RADAR - INV-COMPLIANCE-RADAR)
+* **Fikri Mülkiyet (IP) & Marka Arındırma:** [Prohibition of proprietary trademarks, clean-room asset reproduction, zero copyrighted asset/audio leakage]
+* **Platform & Mevzuat Değişmezleri:** [Yerel veri egemenliği, tarayıcı autoplay/sandbox politikaları, lisans uyumluluğu (MIT/Apache2/GPL-free)]
+* **H-SWOT Pazar Gerçekliği & Hukuki Temizlik Kapısı:** [Fırsatlar (O) pazar rezonansına, Tehditler (T) fikri mülkiyet ve platform sürtünmesine bağlanmalıdır]
+
+---
+
+## 4. TABLE OF DEGREES OF FREEDOM (DoF BUDGET)
 
 | Boundary Layer | Permitted DoF | Constraint Type | Cognitive Referee Rule |
 | :--- | :--- | :--- | :--- |
@@ -21,7 +35,7 @@
 
 ---
 
-## 3. DUAL NORMATIVE SPECIFICATION (LEX VS. NORM)
+## 5. DUAL NORMATIVE SPECIFICATION (LEX VS. NORM)
 
 ### SECTION A: THE LEX (INVIOLABLE HARD INVARIANTS, DoF = 0)
 *Violations of the Lex trigger immediate evaluation rejection (`REJECT`). No ad-hoc workarounds or local overrides permitted.*
@@ -35,8 +49,10 @@
 
 ---
 
-## 4. DEFINITION OF DONE (DoD)
+## 6. DEFINITION OF DONE (DoD)
 - [ ] Specification drafted conforming to `SPEC_TEMPLATE.md` in UTF-8 No-BOM.
+- [ ] Target audience persona and ergonomic matrix verified (`INV-AUDIENCE-TARGET`).
+- [ ] Compliance radar and trademark sanitization confirmed (`INV-COMPLIANCE-RADAR`).
 - [ ] Peer-review consensus and referee audit verified.
 - [ ] Merged to `main` with `--no-ff`, tagged with target release version.
 - [ ] Cryptographic Merkle diploma recorded in `registry/graduates.json`.
