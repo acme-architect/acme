@@ -25,4 +25,5 @@ venv/
 .acme/
 extensions/
 tools/
+verify.py
 

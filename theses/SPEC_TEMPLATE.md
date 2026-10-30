@@ -10,6 +10,12 @@
 ## 1. SCOPE & INTENT
 [Describe the problem formulation, systemic friction, or capability being introduced. Clearly outline the boundary of this specification.]
 
+### SECTION 1.4: PRE-MORTEM ANTI-PATTERN GATES (DoF = 0)
+*Violations halt verification immediately (`REJECT_UNANCHORED_INCEPTION`). Every specification must catalog and explicitly prohibit the top 3 domain-specific structural failure modes before code construction.*
+* **FAILURE MODE 1 (State/Resource Bottleneck):** [E.g., Top-out ceiling compression, buffer saturation, unhandled backpressure] -> `[PROHIBITED]` [Exact negative invariant rule]
+* **FAILURE MODE 2 (Deadlock / Race Condition):** [E.g., 180-degree self-collision, circular wait, unbuffered lock contention] -> `[PROHIBITED]` [Exact negative invariant rule]
+* **FAILURE MODE 3 (Boundary / Leakage Hazard):** [E.g., Out-of-bounds array access, event drop, silent failure] -> `[PROHIBITED]` [Exact negative invariant rule]
+
 ---
 
 ## 2. TARGET AUDIENCE PROFILE & ERGONOMIC MATRIX (INV-AUDIENCE-TARGET)
@@ -53,6 +59,7 @@
 - [ ] Specification drafted conforming to `SPEC_TEMPLATE.md` in UTF-8 No-BOM.
 - [ ] Target audience persona and ergonomic matrix verified (`INV-AUDIENCE-TARGET`).
 - [ ] Compliance radar and trademark sanitization confirmed (`INV-COMPLIANCE-RADAR`).
+- [ ] Pre-mortem anti-pattern gates and top 3 failure modes locked (`INV-SCALE-PREMORTEM`).
 - [ ] Peer-review consensus and referee audit verified.
 - [ ] Merged to `main` with `--no-ff`, tagged with target release version.
 - [ ] Cryptographic Merkle diploma recorded in `registry/graduates.json`.
