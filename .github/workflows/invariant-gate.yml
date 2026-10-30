@@ -60,6 +60,8 @@ jobs:
               'REJECT_EXTREME_ENTROPY',
               'REJECT_SPECULATIVE_STATE',
               'QUARANTINE_AND_LOG',
+              'INV-SINGLE-MANIFEST',
+              'INV-OPTIN-STRICT',
               'Dewdrop Boundary Invariant',
               'Biological Primacy'
           ]
