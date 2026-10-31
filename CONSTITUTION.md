@@ -28,7 +28,11 @@
    * **[PROHIBITED_PREMATURE_LEAP]** Transitioning to downstream deliverables or phase N+1 without verified cryptographic or empirical completion of phase N prerequisites is strictly prohibited (`REJECT_PREMATURE_LEAP`). Agents and workflows must not silently swallow unfulfilled dependencies under conversational momentum or execution haste.
    * **[SOCRATIC_CIRCUIT_BREAKER]** Detecting an unanchored leap immediately trips the execution circuit breaker (`STATUS: HOLD`), halting state progression and interrogating the biological operator with the unresolved dependency.
    * **[MANDATORY_HUMAN_BYPASS]** Prerequisite phases may be bypassed exclusively via deliberate, cryptographically recorded biological authorization (`EXPLICIT_BYPASS_ACKNOWLEDGED`). Unaudited implicit overrides result in immediate compiler halt.
+10. **INV-CIRCADIAN-CADENCE (Circadian Cadence & Reveille/Retreat Protocol / RFC-039 - DoF = 0):**
+    * **[MANDATORY_MORNING_REVEILLE]** Prior to task inception or active execution, downstream execution nodes must execute a mandatory status pull and normative alignment check against the upstream constitutional baseline (`INV-REVEILLE-01`). Starting work against an unverified or stale anchor raises `REJECT_UNSYNCHRONIZED_DISPATCH`.
+    * **[DETERMINISTIC_EVENING_RETREAT]** At the conclusion of the operating cycle, nodes must execute garbage collection, prune ephemeral test scratchpads, dispatch unresolved friction as upstream RFCs, and cryptographically seal living state hashes into the git Merkle tree (`INV-RETREAT-02`).
+    * **[QUIESCENT_STANDBY]** Following retreat certification, autonomous agent runtimes drop compute allocations to zero (`STATUS: STANDBY`), awaiting subsequent biological or scheduled reveille signals (`INV-QUIESCENT-STANDBY-03`).
 
 ### SECTION III: GOVERNANCE & ACCREDITATION
-10. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-11. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+11. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+12. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
