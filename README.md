@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.24.0 | Circadian Cadence & Reveille-Retreat Protocol*
+> *Release v2.25.0 | PMO Archetype Inheritance & Air-Gapped Standalone Distribution*
 
 ---
 

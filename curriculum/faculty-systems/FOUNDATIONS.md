@@ -137,3 +137,10 @@
 
 ### SYS-123: Circadian Cadence, Reveille Roll-Call & Retreat Consolidation Protocol (Node-044 / RFC-039)
 - Enforces diurnal synchronization boundaries across distributed multi-agent nodes: mandatory morning upstream invariant alignment (Reveille) and deterministic end-of-day delta consolidation, scratchpad pruning, and quiescent zero-allocation standby (Retreat).
+
+
+### SYS-124: Hierarchical Archetype Inheritance in Governance PMO (Node-045 / RFC-040)
+- Formalizes intermediate domain archetype tiers between ACME Core Lex Superior and downstream product instances, establishing strict control-plane multi-tier rule derivation with zero runtime leakage.
+
+### SYS-125: Air-Gapped Standalone Public Distribution & Clean-Room Export (Node-046 / RFC-041)
+- Mandates unidirectional clean-room projection from PMO workspaces to public instance repositories, ensuring end-user packages are 100% decontaminated of internal governance artifacts and equipped with one-click bootstrap launchers.

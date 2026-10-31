@@ -32,7 +32,14 @@
     * **[MANDATORY_MORNING_REVEILLE]** Prior to task inception or active execution, downstream execution nodes must execute a mandatory status pull and normative alignment check against the upstream constitutional baseline (`INV-REVEILLE-01`). Starting work against an unverified or stale anchor raises `REJECT_UNSYNCHRONIZED_DISPATCH`.
     * **[DETERMINISTIC_EVENING_RETREAT]** At the conclusion of the operating cycle, nodes must execute garbage collection, prune ephemeral test scratchpads, dispatch unresolved friction as upstream RFCs, and cryptographically seal living state hashes into the git Merkle tree (`INV-RETREAT-02`).
     * **[QUIESCENT_STANDBY]** Following retreat certification, autonomous agent runtimes drop compute allocations to zero (`STATUS: STANDBY`), awaiting subsequent biological or scheduled reveille signals (`INV-QUIESCENT-STANDBY-03`).
+11. **INV-ARCHETYPE-INHERITANCE (PMO Normatif Kalıtımı / RFC-040 - DoF = 0):**
+    * **[CONTROL_PLANE_BOUNDARY]** The multi-tier normative inheritance chain (`instance_spec : archetype : core`) is executed strictly and exclusively within PMO and cognitive control-plane boundaries (`INV-PMO-INHERITANCE-01`).
+    * **[ZERO_RUNTIME_LEAK]** Intermediate archetype frameworks, PMO structures, and upstream governance tooling shall never be exported or linked into runtime application instances (`INV-ZERO-LEAK-TO-RUNTIME-02`).
+12. **INV-STANDALONE-INSTANCE (Bağımsız ve Yalıtılmış Dağıtım / RFC-041 - DoF = 0):**
+    * **[DECONTAMINATED_INSTANCE]** Distributed public open-source repositories and compiled binaries must remain 100% free of `.acme`, `CONSTITUTION.md`, `verify.py`, and all internal PMO governance artifacts (`REJECT_PMO_CONTAMINATION` / `INV-STANDALONE-INSTANCE-01`).
+    * **[CLEAN_ROOM_EXPORT]** Migration from PMO control-plane to public instance occurs exclusively via a unidirectional clean-room filter projecting only pure source (`src/`), unit tests (`tests/`), documentation (`README.md`), and open-source license (`LICENSE`) (`INV-CLEAN-ROOM-PROJECTION-02`).
+    * **[LIGHTWEIGHT_BOOTSTRAP]** Standalone instances must feature a self-contained, one-click launcher architecture retrieving certified releases from GitHub Releases with zero external runtime dependencies (`INV-LIGHTWEIGHT-BOOTSTRAP-03`).
 
 ### SECTION III: GOVERNANCE & ACCREDITATION
-11. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-12. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+13. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+14. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
