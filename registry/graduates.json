@@ -388,7 +388,7 @@
     "node_id": "node-030",
     "faculty": "faculty-systems",
     "thesis_file": "theses/THESIS_030_OSMOSIS_INTERLINGUA_SPEC.md",
-    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "graduation_sha": "cb2b021ce3d77df7df87f90b46e031bf42eb31e1",
     "status": "ACCREDITED",
     "attribution": {
       "candidate_share": 0.7,
