@@ -53,3 +53,4 @@
 - [x] `registry/graduates.json` augmented with `node-045` graduation diploma.
 - [x] `python verify.py --verify-all` passes 100% green with zero code artifacts.
 - [x] Clean `--no-ff` merge to `main`, ready for dual release milestone.
+
