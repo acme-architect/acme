@@ -129,3 +129,7 @@
 
 ### SYS-121: Bilateral Constraint Satisfaction & Fluff-Free Asset Matching (Node-042 / RFC-035)
 - Formulates deterministic Boolean Constraint Satisfaction Problem (CSP) algorithms over stripped scalar dimensions, eliminating subjective promotional adjectives and stale circular syndication.
+
+
+### SYS-122: Sequence Precedence & Socratic Circuit Breaker Invariant (Node-043 / RFC-038)
+- Formalizes inviolable stage precedence locks and Socratic circuit breakers to reject premature leaps and unanchored phase drift without verified upstream completion or explicit human bypass.
