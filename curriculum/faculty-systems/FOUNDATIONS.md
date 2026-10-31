@@ -108,3 +108,24 @@
 
 ### SYS-114: Osmosis Protocol, Interlingua Specification & Universal Node Isomorphism (Node-030 / RFC-036)
 - Establishes reflexive core subjection, osmotic membrane filtration of transient metaphors, and nightly state delta pruning across isomorphic execution nodes.
+
+### SYS-115: Holographic Theory of Constraints & Boundary Homeostasis (Node-035 / RFC-032)
+- Replaces scalar bottleneck throughput optimization with holographic phase divergence calibration, asserting constraint preservation and constitutional subordination.
+
+### SYS-116: Scale Invariance & Micro-Macro Failure Isomorphism (Node-036 / RFC-036)
+- Formalizes the isomorphism between low-dimensional finite state machine failures and distributed macro-system deadlocks, mandating pre-mortem anti-pattern gates.
+
+### SYS-117: Tri-Tier Context Fabric & Single Manifest Architecture (Node-037 / RFC-033)
+- Enforces the single root manifest invariant, default-deny context shielding, and pre-flight circuit breaker gates across hierarchical governance tiers.
+
+### SYS-118: Asynchronous Merkle State Streaming & Bounded Latency (Node-038 / RFC-017)
+- Decouples task execution loops from synchronous disk I/O via non-blocking queues while maintaining cryptographic non-repudiation and zero state loss.
+
+### SYS-119: Agentic Unified Process Meta-Pipeline & Polymath Morphing (Node-039 / RFC-016-B)
+- Operationalizes ordered lifecycle phase gates (Inception, Elaboration, Construction, Transition) and single-agent polymath context morphing to eliminate chatty multi-agent bureaucracy.
+
+### SYS-120: Keystone Invariant Architecture & Least Action Cadence (Node-041 / RFC-034)
+- Mandates cryptographic locking of structural foundation nodes prior to peripheral synthesis, enforcing a four-stage least action progression and ephemeral scaffold evaporation.
+
+### SYS-121: Bilateral Constraint Satisfaction & Fluff-Free Asset Matching (Node-042 / RFC-035)
+- Formulates deterministic Boolean Constraint Satisfaction Problem (CSP) algorithms over stripped scalar dimensions, eliminating subjective promotional adjectives and stale circular syndication.
