@@ -47,3 +47,6 @@
 
 ### LAW-104: Workspace Coherence Gates & Scope Drift Invariants (Node-031 / RFC-028)
 - Guarantees cross-specification non-contradiction and binary estoppel against unsealed scope expansion.
+
+### LAW-105: Deterministic Competency Projection & Privacy Shielding (Node-040 / RFC-024-B)
+- Establishes immutable master capability grounding, deterministic Boolean set intersection for requirement matching, and strict privacy shielding of personal identity markers.

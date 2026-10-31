@@ -394,5 +394,93 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-035",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_035_HOLOGRAPHIC_THEORY_OF_CONSTRAINTS.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-036",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_036_SCALE_INVARIANCE_PREMORTEM.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-037",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_037_TRI_TIER_CONTEXT_FABRIC.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-038",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_038_ASYNC_MERKLE_STATE_STREAMING.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-039",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_039_AGENTIC_UNIFIED_PROCESS_META_PIPELINE.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-040",
+    "faculty": "faculty-law",
+    "thesis_file": "theses/THESIS_040_DETERMINISTIC_COMPETENCY_PROJECTION.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-041",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_041_KEYSTONE_INVARIANT_ARCHITECTURE.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
+  },
+  {
+    "node_id": "node-042",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_042_BILATERAL_CONSTRAINT_SATISFACTION_ENGINE.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
