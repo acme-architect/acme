@@ -9,7 +9,7 @@
 ---
 
 ## 1. INVARIANT TARGET & EPISTEMIC BOUNDARY (THE LEX: DoF = 0)
-* **Ontological Axiom (Micro-Macro Failure Isomorphism):** Finite state machine vulnerabilities observed in low-dimensional toy systems (such as top-out ceiling compression in Tetris or instantaneous 180° self-cannibalization in Snake) are mathematically scale-invariant and topologically isomorphic to catastrophic buffer exhaustion, message queue backpressure collapse, and distributed deadlock cascades in macro-enterprise architectures. A boundary failure tolerated at micro-scale inevitably metastasizes into systemic ruin at production scale.
+* **Ontological Axiom (Micro-Macro Failure Isomorphism):** Finite state machine vulnerabilities observed in low-dimensional bounded systems (such as ceiling compression in a Bounded Finite State Machine (FDSM) or instantaneous 180° discrete state reversal) are mathematically scale-invariant and topologically isomorphic to catastrophic buffer exhaustion, message queue backpressure collapse, and distributed deadlock cascades in macro-enterprise architectures. A boundary failure tolerated at micro-scale inevitably metastasizes into systemic ruin at production scale.
 * **Inviolable Invariant Suite ($\text{DoF} = 0$):**
   - **INV-SCALE-01 (Scale Invariance of Failure):** Architectural soundness is scale-independent. Any algorithm, state machine, or interface failing under minimal micro-boundary conditions is rejected unconditionally as structurally unsound (`REJECT_SCALE_DECOHERENCE`).
   - **INV-SCALE-02 (Mandatory Known Failure Modes):** Every engineering specification must explicitly identify, analyze, and catalog the top 3 domain-specific structural failure modes (`Known Failure Modes`) during Inception before any code generation is authorized.
@@ -32,9 +32,9 @@
 
 ## 3. ADAPTIVE GUIDELINES & HEURISTICS (THE NORMS: DoF >= 1)
 * **Isomorphic Archetype Mapping Heuristic:**
-  1. *Compression Isomorphism:* Tetris grid top-out ceiling $\equiv$ Redis/Kafka memory queue exhaustion under unmanaged upstream producer velocity.
-  2. *Reversal Isomorphism:* Snake instantaneous 180° directional inversion $\equiv$ Distributed two-phase commit cyclic lock deadlock between asynchronous workers.
-  3. *Leakage Isomorphism:* Discrete rendering pop-in $\equiv$ Batch cache eviction stampede under sudden high-concurrency read spikes.
+  1. *Compression Isomorphism:* Bounded Finite State Machine (FDSM) grid ceiling saturation $\equiv$ Redis/Kafka memory queue exhaustion under unmanaged upstream producer velocity.
+  2. *Reversal Isomorphism:* Instantaneous 180° trajectory state inversion $\equiv$ Distributed two-phase commit cyclic lock deadlock between asynchronous workers.
+  3. *Leakage Isomorphism:* Presentation-Only Mutation vs. State Machine Invariance decoherence $\equiv$ Batch cache eviction stampede under sudden high-concurrency read spikes.
 * **Pre-Mortem Inception Protocol:**
   - Before authoring acceptance criteria or algorithmic logic, the specification author must assume the system has failed catastrophically in production and trace the causal chain back to missing boundary conditions.
 
