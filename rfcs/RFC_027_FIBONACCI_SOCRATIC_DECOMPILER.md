@@ -23,5 +23,5 @@
   - **INV-FIBONACCI-01 (4-Tier Inception Decomposition):** Every quarantined subjective superlative MUST be decompiled through a Fibonacci depth tree ($F_1 = 1\text{ Root Intent} \to F_2 = 3\text{ Pillars} \to F_3 = 5\text{ Dimensions} \to F_4 = 8\text{ Assertions per Pillar}$).
   - **INV-FIBONACCI-02 (The Socratic Brake):** Construction phase is strictly prohibited ($\text{DoF}=0$) until critical branching points ($F_2$ and $F_3$ forks: render dimension, acoustic architecture, hardware performance tiers, control bus) are presented to and confirmed by the human root of trust.
 - **B. Proposed Norms (Adaptive Guidance, DoF>=1):**
-  - Domain-specific dimension mappings (arcade, enterprise systems, forensics).
+  - Domain-specific dimension mappings (interactive finite state machines, enterprise systems, forensics).
   - Budget-scaled metric assertion thresholds (latency bounds, token compliance).

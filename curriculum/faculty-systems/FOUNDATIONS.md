@@ -105,3 +105,6 @@
 
 ### SYS-113: Stateful Scar-Tissue Grounding & Pre-Mortem Dialectic Architecture (Node-029 / RFC-029)
 - Equips adversarial critics with cryptographically hashed episodic failure traces, preventing unanchored stateless prompt drift and enforcing pre-mortem rejection gates.
+
+### SYS-114: Osmosis Protocol, Interlingua Specification & Universal Node Isomorphism (Node-030 / RFC-036)
+- Establishes reflexive core subjection, osmotic membrane filtration of transient metaphors, and nightly state delta pruning across isomorphic execution nodes.
