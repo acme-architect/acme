@@ -504,5 +504,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-045",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_045_HIERARCHICAL_ARCHETYPE_INHERITANCE.md",
+    "graduation_sha": "PENDING_MERKLE_SEAL",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
