@@ -133,3 +133,7 @@
 
 ### SYS-122: Sequence Precedence & Socratic Circuit Breaker Invariant (Node-043 / RFC-038)
 - Formalizes inviolable stage precedence locks and Socratic circuit breakers to reject premature leaps and unanchored phase drift without verified upstream completion or explicit human bypass.
+
+
+### SYS-123: Circadian Cadence, Reveille Roll-Call & Retreat Consolidation Protocol (Node-044 / RFC-039)
+- Enforces diurnal synchronization boundaries across distributed multi-agent nodes: mandatory morning upstream invariant alignment (Reveille) and deterministic end-of-day delta consolidation, scratchpad pruning, and quiescent zero-allocation standby (Retreat).

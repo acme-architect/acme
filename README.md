@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.23.0 | Sequence Precedence & Socratic Circuit Breaker Invariant*
+> *Release v2.24.0 | Circadian Cadence & Reveille-Retreat Protocol*
 
 ---
 
