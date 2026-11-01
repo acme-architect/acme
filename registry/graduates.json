@@ -537,5 +537,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-048",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_048_ARCHETYPE_INHERITANCE_AND_MONOLITHIC_INLINING.md",
+    "graduation_sha": "c000250bc21e9ff4e6392c70b9bc4c5cf3644a66",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
