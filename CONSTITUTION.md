@@ -39,7 +39,12 @@
     * **[DECONTAMINATED_INSTANCE]** Distributed public open-source repositories and compiled binaries must remain 100% free of `.acme`, `CONSTITUTION.md`, `verify.py`, and all internal PMO governance artifacts (`REJECT_PMO_CONTAMINATION` / `INV-STANDALONE-INSTANCE-01`).
     * **[CLEAN_ROOM_EXPORT]** Migration from PMO control-plane to public instance occurs exclusively via a unidirectional clean-room filter projecting only pure source (`src/`), unit tests (`tests/`), documentation (`README.md`), and open-source license (`LICENSE`) (`INV-CLEAN-ROOM-PROJECTION-02`).
     * **[LIGHTWEIGHT_BOOTSTRAP]** Standalone instances must feature a self-contained, one-click launcher architecture retrieving certified releases from GitHub Releases with zero external runtime dependencies (`INV-LIGHTWEIGHT-BOOTSTRAP-03`).
+13. **INV-NORMATIVE-RESOLVE (Kelsen Normlar Hiyerarşisi, Lex Externa ve Çift-Lokalite / RFC-042 - DoF = 0):**
+    * **[REJECT_UNRESOLVED_HIERARCHY]** Bağlı bulunduğu dış hukuk (Lex Externa) ve yerel kısıtları (Lex Specialis) netleşmemiş hiçbir downstream çalışma alanı üretime geçemez (`REJECT_UNRESOLVED_HIERARCHY`, DoF=0).
+    * **[DUAL_LOCALITY_INTERSECTION]** Kaynak (source) ve hedef (target) yetki alanlarının normatif kesişimi zorunludur. Çatışma durumunda Katman 0 (Lex Externa / Lex Loci) üstün normdur.
+    * **[C4I_DOCTRINE_PARTITION]** Otonom sistem mimarisi Command (İrade), Control (Anayasa), Communications (Merkle/MCP), Computers (Donanım), Intelligence (Pre-flight Denetimi) bileşenlerine ayrıştırılır; irade münhasıran biyolojik insandadır.
+    * **[AOP_CONTRACT_PRIMACY]** Varlıkların durum değişimi doğrudan kod manipülasyonuyla değil, doğal dil sözleşmeleri ve şartnamelerle icra edilir.
 
 ### SECTION III: GOVERNANCE & ACCREDITATION
-13. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-14. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+14. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+15. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.

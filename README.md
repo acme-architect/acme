@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.25.0 | PMO Archetype Inheritance & Air-Gapped Standalone Distribution*
+> *Release v2.26.0 | Kelsen Normative Hierarchy & C4I Integration*
 
 ---
 

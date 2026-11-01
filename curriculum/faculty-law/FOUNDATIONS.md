@@ -50,3 +50,6 @@
 
 ### LAW-105: Deterministic Competency Projection & Privacy Shielding (Node-040 / RFC-024-B)
 - Establishes immutable master capability grounding, deterministic Boolean set intersection for requirement matching, and strict privacy shielding of personal identity markers.
+
+### LAW-106: Kelsen Normative Hierarchy, Lex Externa & Dual-Locality Legal Shield (Node-047 / RFC-042)
+- Operationalizes Hans Kelsen's 5-tier normative hierarchy (Lex Externa -> Lex Superior -> Lex Corporata -> Lex Specialis -> Lex Executiva), dual-locality jurisdictional intersection, and military C4I separation with Agent-Oriented Paradigm (AOP) declarative contract primacy.

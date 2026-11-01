@@ -526,5 +526,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-047",
+    "faculty": "faculty-law",
+    "thesis_file": "theses/THESIS_047_NORMATIVE_HIERARCHY_LEX_EXTERNA.md",
+    "graduation_sha": "PENDING_COMMIT",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

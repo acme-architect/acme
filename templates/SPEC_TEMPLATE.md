@@ -30,6 +30,16 @@
 * **Platform & Regulatory Invariants:** [Local data sovereignty, browser autoplay/sandbox policies, license compliance (MIT/Apache2/GPL-free)]
 * **H-SWOT Market Reality & Legal Sanitization Gate:** [Opportunities (O) bound to market resonance, Threats (T) bound to IP friction and regulatory barriers]
 
+### SECTION 3.1: REGULATORY_REGISTRY (MANDATORY DUAL-LOCALITY MAPPING, DoF = 0)
+*Violations halt downstream verification immediately (`REJECT_UNRESOLVED_HIERARCHY`). Specifications must catalog origin, transit, and destination statutory compliance bounds prior to construction sprint:*
+
+| Regulatory Domain | Governing Jurisdiction | Applicable Law / Standard | Invariant Constraint | Compliance Verification Gate |
+| :--- | :--- | :--- | :--- | :--- |
+| **Lex Externa (Origin)** | [Host jurisdiction / e.g. TR, EU, US] | [Applicable data privacy / commerce statute] | [Non-negotiable statutory boundary] | `VERIFY_LEX_LOCI_ORIGIN` |
+| **Lex Externa (Target)** | [Deployment jurisdiction / e.g. Global, EU] | [Applicable consumer / privacy law (e.g. GDPR)] | [Data residency & cross-border constraint] | `VERIFY_LEX_LOCI_TARGET` |
+| **Lex Corporata** | [Corporate PMO / Entity] | [HOP, Security Policy, Ethical AI standard] | [Internal governance & human oversight] | `VERIFY_LEX_CORPORATA` |
+| **Lex Specialis** | [Project Node] | `PROJECT_INVARIANTS.md` | [Domain archetype constraint / DoF=0 budget] | `VERIFY_PROJECT_INVARIANTS` |
+
 ---
 
 ## 4. TABLE OF DEGREES OF FREEDOM (DoF BUDGET)
@@ -59,6 +69,7 @@
 - [ ] Specification drafted conforming to `SPEC_TEMPLATE.md` in UTF-8 No-BOM.
 - [ ] Target audience persona and ergonomic matrix verified (`INV-AUDIENCE-TARGET`).
 - [ ] Compliance radar and trademark sanitization confirmed (`INV-COMPLIANCE-RADAR`).
+- [ ] Mandatory `REGULATORY_REGISTRY` dual-locality matrix locked and verified (`INV-NORMATIVE-RESOLVE`).
 - [ ] Pre-mortem anti-pattern gates and top 3 failure modes locked (`INV-SCALE-PREMORTEM`).
 - [ ] Peer-review consensus and referee audit verified.
 - [ ] Merged to `main` with `--no-ff`, tagged with target release version.
