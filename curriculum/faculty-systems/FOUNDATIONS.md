@@ -144,3 +144,7 @@
 
 ### SYS-125: Air-Gapped Standalone Public Distribution & Clean-Room Export (Node-046 / RFC-041)
 - Mandates unidirectional clean-room projection from PMO workspaces to public instance repositories, ensuring end-user packages are 100% decontaminated of internal governance artifacts and equipped with one-click bootstrap launchers.
+
+### SYS-126: Archetype Inheritance & Spec-Level Monolithic Inlining (Node-048 / RFC-043)
+> *Constitutional Coursework: SYS-124 Archetype Inheritance & Spec-Level Monolithic Inlining*
+- Formalizes the lifecycle continuum between Is-A archetype inheritance, Has-A extension contracts, and spec-level monolithic inlining (INV-SPEC-INLINE), fusing ossified capabilities directly into single-binary monobloc deliverables without dynamic runtime rot.

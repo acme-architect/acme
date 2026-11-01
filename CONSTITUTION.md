@@ -44,7 +44,11 @@
     * **[DUAL_LOCALITY_INTERSECTION]** Kaynak (source) ve hedef (target) yetki alanlarının normatif kesişimi zorunludur. Çatışma durumunda Katman 0 (Lex Externa / Lex Loci) üstün normdur.
     * **[C4I_DOCTRINE_PARTITION]** Otonom sistem mimarisi Command (İrade), Control (Anayasa), Communications (Merkle/MCP), Computers (Donanım), Intelligence (Pre-flight Denetimi) bileşenlerine ayrıştırılır; irade münhasıran biyolojik insandadır.
     * **[AOP_CONTRACT_PRIMACY]** Varlıkların durum değişimi doğrudan kod manipülasyonuyla değil, doğal dil sözleşmeleri ve şartnamelerle icra edilir.
+14. **INV-SPEC-INLINE (Monolithic Inlining Invariant - DoF = 0):** Kemikleşmiş eklentilerin monoblok gövdeye katılması şartname seviyesinde deterministik olarak derlenmeli, çalışma zamanında dış bağımlılık kırılganlığına izin verilmemelidir.
+    * **[DECOUPLED_EXPLORATION]** Erken aşama geliştirme gevşek bağlı eklenti sözleşmeleri (`Has-A` / `Attaches-To`) ve yuvalar (slots) üzerinden yürütülür (`INV-EXTENSION-SLOT-02`).
+    * **[DETERMINISTIC_INLINING]** Üretim kararlılık eşiğini (ossification) aşan yetenekler şartname derleyicisi (`spec_compiler`) tarafından tek parça monoblok (`single binary / clean-room deliverable`) gövdeye kaynatılır (`INV-SPEC-INLINE-01`).
+    * **[ZERO_RUNTIME_DEPENDENCY_ROT]** Canlı üretim sürümlerinde dış dinamik eklenti klasörlerine veya çalışma zamanı bağlayıcılarına bağımlılık kesinlikle yasaktır (`REJECT_RUNTIME_FRAGMENTATION`).
 
 ### SECTION III: GOVERNANCE & ACCREDITATION
-14. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-15. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+15. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+16. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
