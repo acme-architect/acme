@@ -148,3 +148,12 @@
 ### SYS-126: Archetype Inheritance & Spec-Level Monolithic Inlining (Node-048 / RFC-043)
 > *Constitutional Coursework: SYS-124 Archetype Inheritance & Spec-Level Monolithic Inlining*
 - Formalizes the lifecycle continuum between Is-A archetype inheritance, Has-A extension contracts, and spec-level monolithic inlining (INV-SPEC-INLINE), fusing ossified capabilities directly into single-binary monobloc deliverables without dynamic runtime rot.
+### SYS-127: Canonical 7-Step AOP Operational Lifecycle State Machine
+- Formally defines the deterministic agent-oriented lifecycle:
+  1. READY (Quiescent Standby / Zero-allocation listener, clean working tree)
+  2. DIRECTIVE (Ingest teleological intent T0, task specification, DoF=0 boundary)
+  3. MARCH (Reveille roll-call, upstream sync git pull, verify.py gate)
+  4. EXECUTE & TELEMETRY (Atomic implementation, iterative test loop, self-healing)
+  5. RELEASE (Optional mid-day production promotion, tag/push on 100% green)
+  6. RETREAT (EOD consolidation, ephemeral debris garbage collection, Merkle lock)
+  7. EOD SUMMARY (Single-page consolidated status telemetry, transition to standby)
